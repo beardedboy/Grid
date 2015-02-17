@@ -13,6 +13,7 @@ $columns: 12;
 $ratio: 1.618;
 $em: $ratio + em;
 $column-padding: $em;
+$bp: 500px;
 
 
 
@@ -69,58 +70,18 @@ $column-padding: $em;
     float: right;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: $bp) {
+
+    @for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .col-#{$i}-#{$columns} {
+           width: $val;
+        }
+    }
 
     [class|=col]{
         margin-bottom: 0;
-    }
-
-    .col-one{
-        width: 8.33333333%;
-    }
-
-    .col-two{
-        width: 16.6666666%;
-    }
-
-    .col-three{
-        width: 24.9999999%;
-    }
-
-    .col-four{
-        width: 33.3333333%;
-    }
-
-    .col-five{
-        width: 41.6666666%;
-    }
-
-    .col-six{
-        width: 50%;
-    }
-
-    .col-seven{
-        width: 58.3333333%;
-    }
-
-    .col-eight{
-        width: 66.6666666%;
-    }
-
-    .col-nine{
-        width: 74.9999999%;
-    }
-
-    .col-ten{
-        width: 83.3333333%;
-    }
-
-    .col-eleven{
-        width: 91.6666666%;
-    }
-
-    .col-twelve{
-        width: 100%;
     }
 
     .col-gr-2-3{
