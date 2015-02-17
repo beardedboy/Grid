@@ -61,6 +61,15 @@
 }
 
 @media screen and (min-width: 31.25em) {
+  .col-3-12 {
+    width: 50%;
+  }
+
+  .col-6-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
   .col-1-12 {
     width: 8.33333%;
   }
