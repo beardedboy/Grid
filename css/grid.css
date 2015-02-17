@@ -1,9 +1,15 @@
 * {
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 100%;
 }
 
-.box {
+/* -------------------------------------------------------------------------
+ SCSS Variables
+---------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------
+ Grid System
+---------------------------------------------------------------------------- */
+.container {
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -29,10 +35,8 @@
 
 [class|=col] {
   float: left;
-  padding: 0 1em 0 1em;
+  padding: 0 1.618em 0 1.618em;
   width: 100%;
-  height: 80px;
-  background-color: gray;
 }
 
 [class|=col] {
@@ -41,10 +45,6 @@
 
 [class|=col]:last-child, .col-last {
   margin-bottom: 0;
-}
-
-[class|=col]:nth-child(odd) {
-  background-color: #999;
 }
 
 [class|=col] [class|=col]:first-child {
@@ -123,4 +123,23 @@
   .col-gr-1-3 {
     width: 38.195303%;
   }
+}
+/* -------------------------------------------------------------------------
+ Presentation only
+---------------------------------------------------------------------------- */
+[class|=col] {
+  background-color: #f6bb4f;
+}
+
+[class|=col] h3 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 80px;
+  font-size: 13px;
+}
+
+.pres-cont {
+  background-color: #ffcc66;
+  height: 80px;
 }
