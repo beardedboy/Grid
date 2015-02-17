@@ -1,19 +1,25 @@
 *{
-                box-sizing: border-box;
-                font-size: 100%;
-            }
+    box-sizing: border-box;
+    font-size: 100%;
+}
 
 
-/* -------------------------------------------------------------------------
- SCSS Variables
----------------------------------------------------------------------------- */
+// -------------------------------------------------------------------------
+// SCSS Variables
+//----------------------------------------------------------------------------
 
-$container-width: 1140px;
+//maximum width of container element, can be set to 100% if you want full screen.
+$container-width: 71.25em;
+
+//Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
 $ratio: 1.618;
+
+//Adds unit measurement to $ratio value.
 $em: $ratio + em;
+
 $column-padding: $em;
-$bp: 500px;
+$bp: 31.25em;
 
 
 
@@ -80,17 +86,19 @@ $bp: 500px;
         }
     }
 
+    .col-r-2-3{
+        width: ( 100% / $ratio);
+    }
+
+    .col-r-1-3{
+        width: 100% - ( 100 / $ratio );
+    }
+
+
     [class|=col]{
         margin-bottom: 0;
     }
 
-    .col-gr-2-3{
-        width: 61.804697%;
-    }
-
-    .col-gr-1-3{
-        width: 38.195303%;
-    }
 }
 
 /* -------------------------------------------------------------------------
