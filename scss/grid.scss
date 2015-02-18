@@ -94,9 +94,9 @@ $bp: 31.25em;
 @media screen and (min-width: 700px) {
 
     @for $i from 1 through $columns {
-        $val: ( 100% / $columns ) * $i;
+        $val: ( 100% /  $i );
 
-        .col-#{$i}-#{$columns} {
+        .col-1-of-#{$i } {
            width: $val;
         }
     }
