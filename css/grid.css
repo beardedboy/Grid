@@ -62,6 +62,7 @@
 
 [class|=col] [class|=col] {
   padding: 0;
+  width: 100%;
 }
 
 /* -------------------------------------------------------------------------
@@ -100,6 +101,10 @@
   .col-ev-6-12 {
     width: 50%;
   }
+
+  .col-ev-6-12 .col-ev-6-12 {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 800px) {
   .col-ev-1-12:nth-child(n+7), .col-ev-3-12, .col-ev-4-12 {
@@ -119,7 +124,7 @@
     width: 25%;
   }
 
-  .col-ev-4-12 {
+  .col-ev-4-12, .col-ev-6-12 .col-ev-4-12 {
     width: 33.33333%;
   }
 
@@ -139,17 +144,17 @@
     width: 38.1953%;
   }
 
-  [class|=col] [class|=col] {
-    padding: 0 1.618em 0 1.618em;
-  }
-
-  [class|=col] [class|=col]:first-child {
-    padding-left: 0;
-  }
-
-  [class|=col] [class|=col]:last-child, .col-last {
-    padding-right: 0;
-  }
+  /*    [class|=col] [class|=col]{
+          padding: 0 $column-padding 0 $column-padding;
+      }
+  
+      [class|=col] [class|=col]:first-child{
+          padding-left: 0;
+      }
+      [class|=col] [class|=col]:last-child, .col-last{
+          padding-right: 0;
+      }
+  */
 }
 @media screen and (min-width: 1000px) {
   [class|=col] {
@@ -163,6 +168,23 @@
 /* -------------------------------------------------------------------------
  Odd Column Layout
 ---------------------------------------------------------------------------- */
+@media screen and (min-width: 38.75em) {
+  .col-odd-4-12 {
+    width: 33.33333%;
+  }
+
+  .col-odd-5-12 {
+    width: 41.66667%;
+  }
+
+  .col-odd-7-12 {
+    width: 58.33333%;
+  }
+
+  .col-odd-8-12 {
+    width: 66.66667%;
+  }
+}
 @media screen and (min-width: 800px) {
   [class|=col-odd] {
     margin-bottom: 0;
@@ -178,22 +200,6 @@
 
   .col-odd-3-12 {
     width: 25%;
-  }
-
-  .col-odd-4-12 {
-    width: 33.33333%;
-  }
-
-  .col-odd-5-12 {
-    width: 41.66667%;
-  }
-
-  .col-odd-7-12 {
-    width: 58.33333%;
-  }
-
-  .col-odd-8-12 {
-    width: 66.66667%;
   }
 
   .col-odd-9-12 {

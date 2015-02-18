@@ -80,7 +80,9 @@ $lg-bp: 1000px;
 
 [class|=col] [class|=col]{
     padding: 0;
+    width: 100%;
 }
+
 
 /* -------------------------------------------------------------------------
  Even Column Layout
@@ -122,6 +124,10 @@ $lg-bp: 1000px;
     .col-ev-6-12 {
         width: 50%;
     }
+
+    .col-ev-6-12 .col-ev-6-12{
+        width: 50%;
+    }
 }
 
 
@@ -152,7 +158,7 @@ $lg-bp: 1000px;
     width: 25%;
   }
 
-  .col-ev-4-12 {
+  .col-ev-4-12, .col-ev-6-12 .col-ev-4-12 {
     width: 33.33333%;
   }
 
@@ -172,7 +178,7 @@ $lg-bp: 1000px;
         width: 100% - ( 100 / $ratio );
     }
 
-    [class|=col] [class|=col]{
+/*    [class|=col] [class|=col]{
         padding: 0 $column-padding 0 $column-padding;
     }
 
@@ -182,7 +188,7 @@ $lg-bp: 1000px;
     [class|=col] [class|=col]:last-child, .col-last{
         padding-right: 0;
     }
-
+*/
 }
 
 @media screen and (min-width: $lg-bp) {
@@ -199,6 +205,26 @@ $lg-bp: 1000px;
 /* -------------------------------------------------------------------------
  Odd Column Layout
 ---------------------------------------------------------------------------- */
+
+@media screen and (min-width: $exsm-bp) {}
+
+@media screen and (min-width: 38.75em) {
+
+    .col-odd-4-12 {
+        width: 33.33333%;
+    }
+    .col-odd-5-12 {
+        width: 41.66667%;
+    }
+
+    .col-odd-7-12{
+        width: 58.33333%;
+    }
+
+    .col-odd-8-12{
+        width: 66.66667%;
+    }
+}
 
 @media screen and (min-width: $med-bp) {
 
@@ -217,19 +243,9 @@ $lg-bp: 1000px;
         width: 25%;
     }
 
-    .col-odd-4-12 {
-        width: 33.33333%;
+    .col-odd-9-12{
+        width: 75%;
     }
-
-    .col-odd-5-12 {
-        width: 41.66667%;
-    }
-
-    .col-odd-7-12{width: 58.33333%;}
-
-    .col-odd-8-12{width: 66.66667%;}
-
-    .col-odd-9-12{width: 75%;}
 
     .col-odd-10-12{width: 83.33333%;}
 
