@@ -28,7 +28,6 @@ $lg-bp: 1000px;
 .container{
     max-width: $container-width;
     margin: 0 auto;
-    box-sizing: border-box;
     font-size: 100%;
 }
 .row{
@@ -90,46 +89,39 @@ $lg-bp: 1000px;
     [class|=col]{
         float: left;
     }
-    .col-whole{
-        width: 100%;
+
+    @for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .col-#{$i}-#{$columns} {
+           width: $val;
+        }
     }
 
-    .col-half{
-        width: 50%;
-    }
-    .col-one-third, .col-two-sixth{
-        width: 33.33333333%;
-    }
-    .col-two-third, .col-four-sixth{
-        width: 66.66666667%;
-    }
-    .col-one-fourth{
-        width: 25%;
-    }
-    .col-three-fourth{
-        width: 75%;
-    }
-    .col-one-fifth{
-        width: 20%;
-    }
-    .col-two-fifth{
-        width: 40%;
-    }
-    .col-three-fifth{
-        width: 60%;
-    }
-    .col-four-fifth{
-        width: 80%;
+    @for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .col-1-#{$columns - $i + 1} {
+           width: (100% / ($columns - $i + 1) );
+        }
     }
 
-    .col-one-sixth{
-        width: 16.66666666666667%;
+
+    @for $i from 1 through ($columns - 1) {
+        $val: ( 100% / $columns ) * $i;
+
+        .offset-#{$i}-#{$columns} {
+           margin-left: $val;
+        }
     }
 
-    .col-five-sixth{
-        width: 83.33333333333333%;
-    }
+    @for $i from 1 through ($columns - 1) {
+        $val: ( 100% / $columns ) * $i;
 
+        .offset-1-#{$columns - $i + 1} {
+           margin-left: (100% / ($columns - $i + 1) );
+        }
+    }
 
 
     [class|=col] [class|=col]{
@@ -157,11 +149,19 @@ $lg-bp: 1000px;
 [class|=col]{
 }
 
+.pres-spacing{
+    height: 100px;
+}
+
+.pres-heading{
+    line-height: 100px;
+}
+
 [class|=col] h3{
     text-align: center;
     padding: 0;
     margin: 0;
-    line-height: 80px;
+    line-height: 40px;
     font-size: 13px;
 }
 
