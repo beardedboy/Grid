@@ -1,9 +1,3 @@
-*{
-    box-sizing: border-box;
-    font-size: 100%;
-}
-
-
 // -------------------------------------------------------------------------
 // SCSS Variables
 //----------------------------------------------------------------------------
@@ -14,7 +8,7 @@ $container-width: 71.25em;
 //Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
 $ratio: 1.618;
-$half: $ratio / 2;
+$half: $ratio;
 
 //Adds unit measurement to $ratio value.
 
@@ -30,61 +24,53 @@ $lg-bp: 1000px;
  Grid System
 ---------------------------------------------------------------------------- */
 
+
 .container{
     max-width: $container-width;
     margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 .row{
-    width: 100%;
+    display: block;
     clear: both;
-    padding-bottom: $padding-bottom;
     *zoom: 1;
 }
 
 .row:before,
 .row:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .row:after {
     clear: both;
 }
 
-[class|=col]{
-    float: left;
-    padding: 0 $padding-side 0 $padding-side;
-    width: 100%;
+.centered-row{
+    display: inline;
 }
 
 [class|=col]{
+    width: 100%;
+}
+
+.grid-content{
+    background-color: #ffcc66;
+    margin: 0 $padding-side;
+    word-wrap: break-word;
     margin-bottom: $padding-bottom;
 }
 
-[class|=col]:last-child, .col-last{
+[class|=col] [class|=col]:last-child{
     margin-bottom: 0;
 }
 
-[class|=col] [class|=col]:first-child{
+.full-width{
+    padding-right: 0;
     padding-left: 0;
 }
-[class|=col] [class|=col]:last-child, .col-last{
-    padding-right: 0;
-    margin-bottom: 0;
-}
 
-.pull-left{
-    float: left;
-}
-
-.pull-right{
-    float: right;
-}
-
-[class|=col] [class|=col]{
-    padding: 0;
-    width: 100%;
-}
 
 
 /* -------------------------------------------------------------------------
@@ -92,137 +78,61 @@ $lg-bp: 1000px;
 ---------------------------------------------------------------------------- */
 
 @media screen and (min-width: $exsm-bp) {
-    .col-ev-1-12{
-        width: 33.33333%;
-    }
-    .col-ev-2-12 {
-        width: 50%;
-    }
-    .col-ev-1-12:nth-child(n+10), .col-ev-2-12:nth-child(n+5){
-        margin-bottom: 0;
-    }
 }
 
 @media screen and (min-width: $sm-bp) {
 
-    .col-ev-1-12{
-        width: 25%;
-    }
-
-    .col-ev-1-12:nth-child(n+9), .col-ev-2-12:nth-child(n+4), .col-ev-3-12:nth-child(n+3), .col-ev-6-12{
-        margin-bottom: 0;
-    }
-
-    .col-ev-2-12 {
-        width: 33.33333%;
-    }
-
-    .col-ev-3-12 {
-        width: 50%;
-    }
-
-    .col-ev-4-12 {
-    }
-
-    .col-ev-6-12 {
-        width: 50%;
-    }
-
-    [class|=col] [class|=col]{
-        margin-bottom: $padding-bottom;
-    }
 }
 
 
 @media screen and (min-width: $med-bp) {
 
-   .col-ev-1-12:nth-child(n+7), .col-ev-3-12, .col-ev-4-12{
-        margin-bottom: 0;
-   }
-
-  .col-ev-1-12 {
-    width: 16.66667%;
-  }
-
-  .col-ev-2-12 {
-    width: 16.66667%;
-    margin-bottom: 0;
-  }
-
-  .col-ev-3-12 {
-    width: 25%;
-  }
-
-  .col-ev-4-12, .col-ev-6-12 .col-ev-4-12 {
-    width: 33.33333%;
-  }
-
-  .col-ev-6-12 {
-    width: 50%;
-  }
-
-  .col-ev-12-12 {
-    width: 100%;
-  }
-
-    .col-gr-2-3{
-        width: ( 100% / $ratio);
+    [class|=col]{
+        float: left;
     }
-
-    .col-gr-1-3{
-        width: 100% - ( 100 / $ratio );
-    }
-
-    [class|=col] .col-ev-1-12{
-        width: 33.33333%;
-    }
-
-    [class|=col] .col-ev-2-12{
-        width: 16.66667%;
-    }
-
-    [class|=col] .col-ev-3-12{
-        width: 25%;
-    }
-
-    [class|=col] .col-ev-4-12{
-        width: 33.33333%;
-    }
-
-    [class|=col] .col-ev-5-12{
-        width: 41.66667%;
-    }
-
-    [class|=col] .col-ev-6-12{
-        width: 50%;
-    }
-
-    [class|=col] .col-ev-7-12{
-        width: 58.33333%;
-    }
-
-    [class|=col] .col-ev-8-12{
-        width: 66.66667%;
-    }
-
-    [class|=col] .col-ev-9-12{
-        width: 75%;
-    }
-
-    [class|=col] .col-ev-10-12{
-        width: 83.33333%;
-    }
-
-    [class|=col] .col-ev-11-12{
-        width: 91.66667%;
-    }
-
-    [class|=col] .col-ev-12-12{
+    .col-whole{
         width: 100%;
     }
 
+    .col-half{
+        width: 50%;
+    }
+    .col-one-third, .col-two-sixth{
+        width: 33.33333333%;
+    }
+    .col-two-third, .col-four-sixth{
+        width: 66.66666667%;
+    }
+    .col-one-fourth{
+        width: 25%;
+    }
+    .col-three-fourth{
+        width: 75%;
+    }
+    .col-one-fifth{
+        width: 20%;
+    }
+    .col-two-fifth{
+        width: 40%;
+    }
+    .col-three-fifth{
+        width: 60%;
+    }
+    .col-four-fifth{
+        width: 80%;
+    }
+
+    .col-one-sixth{
+        width: 16.66666666666667%;
+    }
+
+    .col-five-sixth{
+        width: 83.33333333333333%;
+    }
+
+
+
     [class|=col] [class|=col]{
-        padding: 0 $padding-side 0 $padding-side;
         margin-bottom: 0;
     }
 
@@ -230,65 +140,14 @@ $lg-bp: 1000px;
 
 @media screen and (min-width: $lg-bp) {
 
-    [class|=col]{
-        margin-bottom: 0;
-    }
-
-    .col-ev-1-12{
-        width: 8.33333%;
-    }
-
 }
 
 /* -------------------------------------------------------------------------
- Odd Column Layout
+ Grid Helper Classes
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
-
-@media screen and (min-width: 38.75em) {
-
-    .col-odd-4-12 {
-        width: 33.33333%;
-    }
-    .col-odd-5-12 {
-        width: 41.66667%;
-    }
-
-    .col-odd-7-12{
-        width: 58.33333%;
-    }
-
-    .col-odd-8-12{
-        width: 66.66667%;
-    }
-}
-
-@media screen and (min-width: $med-bp) {
-
-    [class|=col-odd]{
-        margin-bottom: 0;
-    }
-    .col-odd-1-12{
-        width: 8.33333%;
-    }
-
-    .col-odd-2-12{
-        width: 16.66667%;
-    }
-
-    .col-odd-3-12{
-        width: 25%;
-    }
-
-    .col-odd-9-12{
-        width: 75%;
-    }
-
-    .col-odd-10-12{width: 83.33333%;}
-
-    .col-odd-11-12{width: 91.66667%;}
-
+.float-right{
+    float: right;
 }
 
 /* -------------------------------------------------------------------------
@@ -296,10 +155,6 @@ $lg-bp: 1000px;
 ---------------------------------------------------------------------------- */
 
 [class|=col]{
-    //background-color: #f6bb4f;
-}
-
-[class|=col]:nth-child(odd){
 }
 
 [class|=col] h3{
@@ -308,10 +163,5 @@ $lg-bp: 1000px;
     margin: 0;
     line-height: 80px;
     font-size: 13px;
-}
-
-.pres-cont{
-    background-color: #ffcc66;
-    height: 80px;
 }
 
