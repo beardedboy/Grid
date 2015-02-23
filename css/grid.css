@@ -2,9 +2,8 @@
  Grid System
 ---------------------------------------------------------------------------- */
 .container {
-  max-width: 71.25em;
+  max-width: 100%;
   margin: 0 auto;
-  font-size: 100%;
 }
 
 .row {
@@ -23,6 +22,11 @@
   clear: both;
 }
 
+.row-fixed {
+  max-width: 71.25em;
+  margin: 0 auto;
+}
+
 .centered-row {
   display: inline;
 }
@@ -32,8 +36,15 @@
 }
 
 .grid-content {
-  background-color: #ffcc66;
   margin: 0 1.618em;
+}
+
+.grid-content_nopadding {
+  margin: 0;
+}
+
+.grid-content, .grid-content_nopadding {
+  background-color: #ffcc66;
   word-wrap: break-word;
   margin-bottom: 1.618em;
 }
@@ -101,6 +112,14 @@
 
   .col-12-12 {
     width: 100%;
+  }
+
+  .col-gr-1-3 {
+    width: 38.19530284301607%;
+  }
+
+  .col-gr-2-3 {
+    width: 61.80469715698393%;
   }
 
   [class|=col] [class|=col] {
@@ -410,6 +429,10 @@
 /* -------------------------------------------------------------------------
  Grid Helper Classes
 ---------------------------------------------------------------------------- */
+.float-left {
+  float: left;
+}
+
 .float-right {
   float: right;
 }
