@@ -74,13 +74,38 @@ or
 `<div class = "col-1-5"></div>`<br>
 `<div class = "col-1-5"></div>`<br>
 
+Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
 
-####Offsetting
+<hr>
 
+###Offsetting
 
+Additional classes can be added to a column to allow that column to be offset from the left of the screen by the specified increment.
+
+In the example below, a col-6-12 would extend to 50% the width of the row it's in and would usually begin on the left side of its container. However an offset class of 3-12 has been added, effectively shifting the columns right by 25%, resulting in a centrally positioned column.
 
 ######Example
 
 `<div class = "col-6-12 offset-3-12"></div>`
+
+<hr>
+
+###Nesting
+
+Grids can be nested within others and in conjuction with offsetting can allow more complicated grid systems to be constructed.
+
+Each new set of nested columns should be nested within a 'row' classed container.
+
+
+######Example
+
+`<div class = "col-6-12"></div>`<br>
+`<div class = "col-6-12">`<br>
+`<div class = "row">`<br>
+`<div class = "col-1-3"></div>`<br>
+`<div class = "col-1-3"></div>`<br>
+`<div class = "col-1-3"></div>`<br>
+`</div>`<br>
+`</div>`<br>
 
 <hr>
