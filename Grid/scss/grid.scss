@@ -59,15 +59,15 @@ $lg-bp: 1000px;
     width: 100%;
 }
 
-.grid-content{
+.col-content{
     margin: 0 $padding-side;
 }
 
-.grid-content_nopadding{
+.col-content_nopadding{
     margin: 0;
 }
 
-.grid-content, .grid-content_nopadding{
+.col-content, .col-content_nopadding{
     background-color: #ffcc66;
     word-wrap: break-word;
     margin-bottom: $padding-bottom;

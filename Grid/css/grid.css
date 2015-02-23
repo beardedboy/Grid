@@ -35,15 +35,15 @@
   width: 100%;
 }
 
-.grid-content {
+.col-content {
   margin: 0 1.618em;
 }
 
-.grid-content_nopadding {
+.col-content_nopadding {
   margin: 0;
 }
 
-.grid-content, .grid-content_nopadding {
+.col-content, .col-content_nopadding {
   background-color: #ffcc66;
   word-wrap: break-word;
   margin-bottom: 1.618em;
