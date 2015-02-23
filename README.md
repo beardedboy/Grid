@@ -1,4 +1,7 @@
 # Grid
 A lightweight CSS responsive grid
 
-A flexible responsive yet lightweight grid system build in SCSS and compiled to CSS.
+A flexible responsive yet grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
+
+##Basic Anatomy
+
