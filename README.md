@@ -109,3 +109,20 @@ Each new set of nested columns should be nested within a 'row' classed container
 `</div>`<br>
 
 <hr>
+
+###Additional Classes
+
+Grids can be nested within others and in conjuction with offsetting can allow more complicated grid systems to be constructed.
+
+Each new set of nested columns should be nested within a 'row' classed container.
+
+
+######Example
+
+<hr>
+
+##Responsive
+
+By default all columns begin at 100% width and stack one on top the other until they hit a media query with a breakpoint of 50em( initally set within a SCSS variable) at which point all columns are floated left and their appropriate widths are applied.
+
+A set of four media queries have been added to get you going but their contents have been left empty on purpose to allow you to alter the widths of the responsive grid on a per project basis.
