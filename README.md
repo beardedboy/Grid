@@ -6,7 +6,7 @@ A flexible and responsive 12 column grid system build in SCSS, compiled to CSS a
 ##Basic Anatomy
 
 ###Container
-All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS variable and all child elements ( mostly likely the rows declared within the container ) max-widths are governed by this.
+All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS variable and all child elements ( mostly likely the rows declared within the container ) max-widths are restrained by this.
 
 ######Example
 
