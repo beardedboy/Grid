@@ -1,7 +1,7 @@
 # Grid
 A lightweight CSS responsive grid
 
-A flexible responsive yet grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
+A flexible and responsive 12 column grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
 
 ##Basic Anatomy
 
@@ -44,5 +44,43 @@ I have decided not to declare any padding to the columns themselves as this has 
 
 `<div class = "col-6-12"><div class = "col-content">content goes here</div></div>`
 
+
+####Layout Columns
+
+Layout columns widths are defined as x columns out of 12.  Ranging from 1 column out of 12 occupying just 1/12th of the width of a row upto 12 columns out of 12 occupying 100% the width of a row.
+
+######Example
+
+`<div class = "col-6-12"></div>`<br>
+`<div class = "col-4-12"></div>`<br>
+`<div class = "col-2-12"></div>`<br>
+
+
+####Content Columns
+
+Content columns are divided equally by 100% and are represented by an appropriate fraction.  Splitting the total width equally ranging from two halves ( 50 / 50) and labelling the classe as 'col-1-2' to signify 1/2 ( One half ) through to splitting it into twelve equal parts and labelling the class 'col-1-12'.
+
+######Example
+
+`<div class = "col-1-3"></div>`<br>
+`<div class = "col-1-3"></div>`<br>
+`<div class = "col-1-3"></div>`<br>
+
+or
+
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+
+
+####Offsetting
+
+
+
+######Example
+
+`<div class = "col-6-12 offset-3-12"></div>`
 
 <hr>
