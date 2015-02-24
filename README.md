@@ -138,3 +138,11 @@ Each new set of nested columns should be nested within a 'row' classed container
 By default all columns begin at 100% width and stack one on top the other until they hit a media query with a breakpoint of 50em( initally set within a SCSS variable) at which point all columns are floated left and their appropriate widths are applied.
 
 A set of four media queries have been added to get you going but their contents have been left empty on purpose to allow you to alter the widths of the responsive grid on a per project basis.
+
+<hr>
+
+##Issues to fix
+
+The current list of ongoing issues to fix are:
+
+*Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.
