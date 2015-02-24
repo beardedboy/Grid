@@ -78,6 +78,29 @@ Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defini
 
 <hr>
 
+####Ratio Columns
+
+Using the ratio variable specified in the SCSS, a set of columns are constructed based on this ratio that can used.  Using the golden ratio (1.618) for example will result in two columns being create that are split according to this ratio ( 61.8 / 38.2 split). 
+
+Columns spacing are based on the input ratio value as well to keep the layout to the same scale.
+
+######Example
+
+`<div class = "col-ratio-2-3"></div>`<br>
+`<div class = "col-ratio-1-3"></div>`<br>
+
+or
+
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
+
+Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
+
+<hr>
+
 ###Offsetting
 
 Additional classes can be added to a column to allow that column to be offset from the left of the screen by the specified increment.
