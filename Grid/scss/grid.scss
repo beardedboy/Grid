@@ -9,11 +9,10 @@ $fixed-width: 71.25em;
 //Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
 $ratio: 1.618;
-$half: $ratio;
 
 //Adds unit measurement to $ratio value.
 
-$padding-side: $half + em;
+$padding-side: $ratio + em;
 $padding-bottom: $ratio + em;
 $exsm-bp: 25em;
 $sm-bp: 31.25em;
@@ -57,24 +56,24 @@ $lg-bp: 62.5em;
 
 [class|=col]{
     width: 100%;
-}
-
-.col-content{
-    margin: 0 $padding-side;
-}
-
-.col-content_nopadding{
-    margin: 0;
-}
-
-.col-content, .col-content_nopadding{
-    background-color: #ffcc66;
-    word-wrap: break-word;
     margin-bottom: $padding-bottom;
 }
 
 [class|=col] [class|=col]:last-child{
     margin-bottom: 0;
+}
+
+.grid-content{
+    margin: 0 $padding-side;
+}
+
+.grid-content_nopadding{
+    margin: 0;
+}
+
+.grid-content, .grid-content_nopadding{
+    background-color: #ffcc66;
+    word-wrap: break-word;
 }
 
 .full-width{

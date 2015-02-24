@@ -33,24 +33,24 @@
 
 [class|=col] {
   width: 100%;
-}
-
-.col-content {
-  margin: 0 1.618em;
-}
-
-.col-content_nopadding {
-  margin: 0;
-}
-
-.col-content, .col-content_nopadding {
-  background-color: #ffcc66;
-  word-wrap: break-word;
   margin-bottom: 1.618em;
 }
 
 [class|=col] [class|=col]:last-child {
   margin-bottom: 0;
+}
+
+.grid-content {
+  margin: 0 1.618em;
+}
+
+.grid-content_nopadding {
+  margin: 0;
+}
+
+.grid-content, .grid-content_nopadding {
+  background-color: #ffcc66;
+  word-wrap: break-word;
 }
 
 .full-width {
