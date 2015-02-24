@@ -145,4 +145,4 @@ A set of four media queries have been added to get you going but their contents 
 
 The current list of ongoing issues to fix are:
 
-+Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.
+<ul><li>Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.</li></ul>
