@@ -3,6 +3,10 @@ A lightweight CSS responsive grid
 
 A flexible and responsive 12 column grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
 
+Supported: IE9+, Chrome, Firefox, Safari
+
+To support IE6-8 add http://selectivizr.com/ to your project. (due to the use of :last-child )
+
 ##Basic Anatomy
 
 ###Container
@@ -141,8 +145,9 @@ A set of four media queries have been added to get you going but their contents 
 
 <hr>
 
-##Issues to fix
+##Features / Issues to fix
 
-The current list of ongoing issues to fix are:
+The current list of ongoing issues to fix or new features to add are:
 
-<ul><li>Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.</li></ul>
+<ul><li>Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.</li>
+<li>Create IE targeted CSS to account for lack of IE6-8 support so user can then decide either to use a css only method or JS method ( Using Selectivizr or equivalent ) to add support</li></ul>
