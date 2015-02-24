@@ -76,7 +76,6 @@ or
 
 Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
 
-<hr>
 
 ####Ratio Columns
 
