@@ -135,9 +135,6 @@ Each new set of nested columns should be nested within a 'row' classed container
 	<li>.full-width - Applied to a column it will not apply any margins either side, stretching out 100% of the available space.</li>
 </ul>
 
-
-######Example
-
 <hr>
 
 ##Responsive
