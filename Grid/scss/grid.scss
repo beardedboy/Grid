@@ -4,16 +4,17 @@
 
 //maximum width of container element, can be set to 100% if you want full screen.
 $container-width: 100%;
-$fixed-width: 71.25em;
+$row-fixed-width: 71.25em;
 
 //Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
 $ratio: 1.618;
 
 //Adds unit measurement to $ratio value.
-
 $padding-side: ($ratio / 2) + em;
 $padding-bottom: $ratio + em;
+
+//Breakpoint values
 $exsm-bp: 25em;
 $sm-bp: 31.25em;
 $med-bp: 50em;
@@ -46,7 +47,7 @@ $lg-bp: 62.5em;
 }
 
 .row-fixed{
-    max-width: $fixed-width;
+    max-width: $row-fixed-width;
     margin: 0 auto;
 }
 
@@ -110,11 +111,11 @@ $lg-bp: 62.5em;
     }
 
     .col-ratio-1-3{
-        width: 38.19530284301607%;
+        width: percentage( ( 1 - ( 1 / $ratio ) ) );
     }
 
     .col-ratio-2-3{
-        width: 61.80469715698393%;
+        width: percentage( 1 / $ratio );
     }
 
     [class|=col] [class|=col]{
