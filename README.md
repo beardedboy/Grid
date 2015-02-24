@@ -133,7 +133,7 @@ Each new set of nested columns should be nested within a 'row' classed container
 	the max-width specified in the SCSS variable $row-fixed-width instead and center it's contents.</li>
 	<li>.float-left, .float-right - Easy one really, they both respectively float the container they're attached too either left or right.  These have been added to show their functionality with the example grid, however these helper classes would probably be added to your css code at an earlier stage and removed from here.</li>
 	<li>.full-width - Applied to a column it will not apply any margins either side, stretching out 100% of the available space.</li>
-<ul>
+</ul>
 
 
 ######Example
