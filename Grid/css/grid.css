@@ -27,10 +27,6 @@
   margin: 0 auto;
 }
 
-.centered-row {
-  display: inline;
-}
-
 [class|=col] {
   width: 100%;
   margin-bottom: 1.618em;
@@ -44,18 +40,14 @@
   margin: 0 0.809em;
 }
 
-.grid-content_nopadding {
-  margin: 0;
-}
-
-.grid-content, .grid-content_nopadding {
+.grid-content {
   background-color: #ffcc66;
   word-wrap: break-word;
 }
 
 .full-width {
-  padding-right: 0;
-  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /* -------------------------------------------------------------------------

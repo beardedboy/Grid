@@ -10,7 +10,7 @@ To support IE6-8 add http://selectivizr.com/ to your project. (due to the use of
 ##Basic Anatomy
 
 ###Container
-All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS variable and all child elements ( mostly likely the rows declared within the container ) max-widths are restrained by this.
+All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS variable and all child elements ( mostly likely the rows declared within the container ) max-widths are restrained to this.
 
 ######Example
 
@@ -41,7 +41,7 @@ Columns are used to split content horizontally. Column widths are set in percent
 `<div class = "col-4-12"></div>`<br>
 `<div class = "col-2-12"></div>`<br>
 
-I have decided not to declare any padding to the columns themselves as this has caused issues with uneven widths when nesting columns ( more on nesting later ).  Instead each column needs to include a div with a 'col-content' class.  The actual columns content will be placed within this div.
+I have decided not to declare any padding to the columns themselves as this has caused issues with uneven widths when nesting columns ( more on nesting later ).  Instead each column needs to include a div with a 'col-content' class.  The actual columns content will be placed within this container.
 
 
 ######Example
@@ -62,7 +62,7 @@ Layout columns widths are defined as x columns out of 12.  Ranging from 1 column
 
 ####Content Columns
 
-Content columns are divided equally by 100% and are represented by an appropriate fraction.  Splitting the total width equally ranging from two halves ( 50 / 50) and labelling the classe as 'col-1-2' to signify 1/2 ( One half ) through to splitting it into twelve equal parts and labelling the class 'col-1-12'.
+Content columns are divided equally by 100% and are represented by an appropriate fraction.  Splitting the total width equally ranging from two halves ( 50 / 50) and labelling the classes as 'col-1-2' to signify 1/2 ( One half ) through to splitting it into twelve equal parts and labelling the class 'col-1-12'.
 
 ######Example
 
@@ -83,9 +83,9 @@ Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defini
 
 ####Ratio Columns
 
-Using the ratio variable specified in the SCSS, a set of columns are constructed based on this ratio that can used.  Using the golden ratio (1.618) for example will result in two columns being create that are split according to this ratio ( 61.8 / 38.2 split). 
+Using the ratio variable specified in the SCSS, a set of columns are constructed based on this ratio that can be used.  Using the golden ratio (1.618) for example will result in two columns being create that are split according to this ratio ( 61.8 / 38.2 split). 
 
-Columns spacing are based on the input ratio value as well to keep the layout to the same scale.
+Columns spacing are based on the ratio value as well to keep the layout to the same scale.
 
 ######Example
 
@@ -96,9 +96,9 @@ Columns spacing are based on the input ratio value as well to keep the layout to
 
 ###Offsetting
 
-Additional classes can be added to a column to allow that column to be offset from the left of the screen by the specified increment.
+Additional classes can be added to a column to allow that column to be offset from the left of its container by the specified increment.
 
-In the example below, a col-6-12 would extend to 50% the width of the row it's in and would usually begin on the left side of its container. However an offset class of 3-12 has been added, effectively shifting the columns right by 25%, resulting in a centrally positioned column.
+In the example below, a col-6-12 would extend to 50% the width of the container it's in and would usually begin on the left most side of its parent. However an offset class of 3-12 has been added, effectively shifting the columns right by 25% ( which is applied as a 'margin-left' value in the CSS ), resulting in a centrally positioned column.
 
 ######Example
 
@@ -108,7 +108,7 @@ In the example below, a col-6-12 would extend to 50% the width of the row it's i
 
 ###Nesting
 
-Grids can be nested within others and in conjuction with offsetting can allow more complicated grid systems to be constructed.
+Grids can be nested within others, and in conjuction with offsetting can allow more complicated grid systems to be constructed.
 
 Each new set of nested columns should be nested within a 'row' classed container.
 
@@ -128,9 +128,12 @@ Each new set of nested columns should be nested within a 'row' classed container
 
 ###Additional Classes
 
-Grids can be nested within others and in conjuction with offsetting can allow more complicated grid systems to be constructed.
-
-Each new set of nested columns should be nested within a 'row' classed container.
+<ul>
+	<li>.row-fixed - If you set the container width to 100% any row class directly inside it will fill to 100% as well.  If you add this class to your row it will take on
+	the max-width specified in the SCSS variable $row-fixed-width instead and center it's contents.</li>
+	<li>.float-left, .float-right - Easy one really, they both respectively float the container they're attached too either left or right.  These have been added to show their functionality with the example grid, however these helper classes would probably be added to your css code at an earlier stage and removed from here.</li>
+	<li>.full-width - Applied to a column it will not apply any margins either side, stretching out 100% of the available space.</li>
+<ul>
 
 
 ######Example
