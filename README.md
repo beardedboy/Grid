@@ -88,16 +88,6 @@ Columns spacing are based on the input ratio value as well to keep the layout to
 `<div class = "col-ratio-2-3"></div>`<br>
 `<div class = "col-ratio-1-3"></div>`<br>
 
-or
-
-`<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5"></div>`<br>
-
-Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
-
 <hr>
 
 ###Offsetting
