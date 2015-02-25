@@ -51,12 +51,12 @@ $lg-bp: 62.5em;
     margin: 0 auto;
 }
 
-[class|=col]{
+[class^=col]{
     width: 100%;
     margin-bottom: $padding-bottom;
 }
 
-[class|=col] [class|=col]:last-child{
+[class^=col] [class^=col]:last-child{
     margin-bottom: 0;
 }
 
@@ -92,7 +92,7 @@ $lg-bp: 62.5em;
 
 @media screen and (min-width: $med-bp) {
 
-    [class|=col]{
+    [class^=col]{
         float: left;
     }
 
@@ -112,15 +112,15 @@ $lg-bp: 62.5em;
         width: percentage( 1 / $ratio );
     }
 
-    [class|=col] [class|=col]{
+    [class^=col] [class^=col]{
         margin-bottom: 0;
     }
 
 }
 
 @media screen and (min-width: $lg-bp) {
-
 }
+
 
 /* -------------------------------------------------------------------------
  Layout Offset Columns
@@ -361,7 +361,7 @@ $lg-bp: 62.5em;
     line-height: 100px;
 }
 
-[class|=col] h3{
+[class^=col] h3{
     text-align: center;
     padding: 0;
     margin: 0;

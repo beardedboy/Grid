@@ -5,7 +5,7 @@ A flexible and responsive 12 column grid system build in SCSS, compiled to CSS a
 
 Supported: IE9+, Chrome, Firefox, Safari
 
-To support IE6-8 add http://selectivizr.com/ to your project. (due to the use of :last-child )
+To support IE6-8: add http://selectivizr.com/ (due to the use of :last-child ) and https://github.com/scottjehl/Respond to your project (due to media queries).
 
 ##Basic Anatomy
 

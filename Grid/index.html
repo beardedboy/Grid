@@ -9,6 +9,13 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/grid.min.css">
+
+        <!-- Use this option if you want to use a ie only stylesheet to alter the grid to support IE6-8 -->
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/grid.ieonly.min.css">
+        <![endif]-->
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -245,14 +252,19 @@
             <div class = "row">
                 <div class="col-1-1"><div class = "grid-content"><h3>1-1</h3></div></div>
             </div>
-
-
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- Use this option if you want to use JS to polyfill for IE6-8 support -->
+
+        <!--[if lte IE 8]>
+            <script src="js/vendor/selectivizr.min.js"></script>
+            <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
 
     </body>
 </html>
