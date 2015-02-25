@@ -8,12 +8,13 @@
         <meta name="viewport" grid-content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/grid.min.css">
+        <!--<link rel="stylesheet" href="css/grid.min.css">-->
+        <link rel="stylesheet" href="css/grid-ie.min.css">
 
         <!-- Use this option if you want to use a ie only stylesheet to alter the grid to support IE6-8 -->
 
         <!--[if lte IE 8]>
-            <link rel="stylesheet" href="css/grid.ieonly.min.css">
+            <link rel="stylesheet" href="css/grid-ie.min.css">
         <![endif]-->
 
     </head>
@@ -28,7 +29,7 @@
                 <div class = "col-12-12"><div class = "grid-content"><h3>12-12</h3></div></div>
             </div>
             <div class = "row">
-                <div class = "col-12-12"><div class = "grid-content full-width"><h3>12-12</h3></div></div>
+                <div class = "col-12-12"><div class = "grid-content"><h3>12-12</h3></div></div>
             </div>
             <div class = "row">
                 <div class="col-1-12"><div class="grid-content"><h3>1-12</h3></div></div>
@@ -48,7 +49,12 @@
             </div>
             <div class = "row">
                 <div class="col-5-12"><div class="grid-content"><h3>5-12</h3></div></div>
-                <div class="col-7-12"><div class="grid-content"><h3>7-12</h3></div></div>
+                <div class="col-7-12">
+                    <div class = "row">
+                        <div class="col-4-12"><div class="grid-content"><h3>Nested 4-12</h3></div></div>
+                        <div class="col-8-12"><div class="grid-content"><h3>Nested 8-12</h3></div></div>
+                    </div>
+                </div>
             </div>
             <div class = "row">
                 <div class="col-6-12"><div class="grid-content"><h3>6-12</h3></div></div>
@@ -110,7 +116,7 @@
                 <div class = "col-1-7"><div class = "grid-content"><h3>1-7</h3></div></div>
                 <div class = "col-1-7"><div class = "grid-content"><h3>1-7</h3></div></div>
                 <div class = "col-1-7"><div class = "grid-content"><h3>1-7</h3></div></div>
-                <div class = "col-1-7"><div class = "grid-content full-width"><h3>1-7</h3></div></div>
+                <div class = "col-1-7"><div class = "grid-content"><h3>1-7</h3></div></div>
             </div>
             <div class = "row">
                 <div class = "col-1-7 offset-4-7"><div class = "grid-content"><h3>1-7</h3></div></div>

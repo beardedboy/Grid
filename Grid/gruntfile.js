@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {                         // Dictionary of files
-                    'css/grid.css': 'scss/grid.scss'
+                    'css/grid.css': 'scss/grid.scss',
+                    'css/grid-ie.css': 'scss/grid-ie.scss'
                 }
 
             }
@@ -25,9 +26,13 @@ module.exports = function(grunt) {
         },
 
         cssmin: {
-            minify: {
-                src: 'css/grid.css',
-                dest: 'css/grid.min.css'
+            target: {
+                files: {
+                    'css/grid.min.css': ['css/grid.css']
+                },
+                files: {
+                    'css/grid-ie.min.css': ['css/grid-ie.css']
+                }
             }
         },
         watch: {

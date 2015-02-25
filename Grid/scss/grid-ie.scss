@@ -3,22 +3,17 @@
 //----------------------------------------------------------------------------
 
 //maximum width of container element, can be set to 100% if you want full screen.
-$container-width: 100%;
-$row-fixed-width: 71.25em;
+$container-width: 60em;
+$row-max-width: 100%;
+$row-min-width: 40em;
 
 //Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
 $ratio: 1.618;
 
 //Adds unit measurement to $ratio value.
-$padding-side: ($ratio / 2) + em;
-$padding-bottom: $ratio + em;
-
-//Breakpoint values
-$exsm-bp: 25em;
-$sm-bp: 31.25em;
-$med-bp: 50em;
-$lg-bp: 62.5em;
+$margin-side: ($ratio / 2) + em;
+$margin-bottom: $ratio + em;
 
 
 /* -------------------------------------------------------------------------
@@ -33,6 +28,8 @@ $lg-bp: 62.5em;
     display: block;
     clear: both;
     *zoom: 1;
+    max-width: $row-max-width;
+    min-width: $row-min-width;
 }
 
 .row:before,
@@ -45,22 +42,21 @@ $lg-bp: 62.5em;
     clear: both;
 }
 
-.row-fixed{
-    max-width: $row-fixed-width;
-    margin: 0 auto;
+.row .row{
+    min-width: 100%;
 }
 
 [class^=col]{
-    width: 100%;
-    margin-bottom: $padding-bottom;
+    float: left;
+    margin-bottom: $margin-bottom;
 }
 
-[class^=col] [class^=col]:last-child{
+[class^=col] [class^=col]{
     margin-bottom: 0;
 }
 
 .grid-content{
-    margin: 0 $padding-side;
+    margin: 0 $margin-side;
 }
 
 .grid-content{
@@ -74,32 +70,21 @@ $lg-bp: 62.5em;
 }
 
 
-
-
-
 /* -------------------------------------------------------------------------
  Layout Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {
-}
-
-@media screen and (min-width: $sm-bp) {
-
-}
-
-
-@media screen and (min-width: $med-bp) {
-
-    [class^=col]{
-        float: left;
-    }
-
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
-        .col-#{$i}-#{$columns} {
-           width: $val;
+        @if $columns / $i >= 2 {
+            .col-#{$i}-#{$columns} {
+                width: $val;
+            }
+        } @else{
+            .col-#{$i}-#{$columns} {
+                width: $val;
+            }
         }
     }
 
@@ -111,26 +96,10 @@ $lg-bp: 62.5em;
         width: percentage( 1 / $ratio );
     }
 
-    [class^=col] [class^=col]{
-        margin-bottom: 0;
-    }
-
-}
-
-@media screen and (min-width: $lg-bp) {
-}
-
-
 /* -------------------------------------------------------------------------
  Layout Offset Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
-
-@media screen and (min-width: $sm-bp) {}
-
-
-@media screen and (min-width: $med-bp) {
     @for $i from 1 through ($columns - 1) {
         $val: ( 100% / $columns ) * $i;
 
@@ -138,21 +107,11 @@ $lg-bp: 62.5em;
            margin-left: $val;
         }
     }
-}
-
-@media screen and (min-width: $lg-bp) {}
-
 
 /* -------------------------------------------------------------------------
  Content Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
-
-@media screen and (min-width: $sm-bp) {}
-
-
-@media screen and (min-width: $med-bp) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
@@ -160,21 +119,11 @@ $lg-bp: 62.5em;
            width: (100% / ($columns - $i + 1) );
         }
     }
-}
-
-@media screen and (min-width: $lg-bp) {}
 
 
 /* -------------------------------------------------------------------------
  Content Offset Columns
 ---------------------------------------------------------------------------- */
-
-@media screen and (min-width: $exsm-bp) {}
-
-@media screen and (min-width: $sm-bp) {}
-
-
-@media screen and (min-width: $med-bp) {
 
     .offset-1-2, .offset-2-4, .offset-3-6, .offset-4-8, .offset-5-10, .offset-6-12{
         margin-left: 50%;
@@ -331,22 +280,6 @@ $lg-bp: 62.5em;
         margin-left: 91.66666666666663%;
     }
 
-}
-
-@media screen and (min-width: $lg-bp) {}
-
-
-/* -------------------------------------------------------------------------
- Grid Helper Classes
----------------------------------------------------------------------------- */
-
-.float-left{
-    float: left;
-}
-
-.float-right{
-    float: right;
-}
 
 /* -------------------------------------------------------------------------
  Presentation only
