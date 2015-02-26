@@ -3,9 +3,9 @@ A lightweight CSS responsive grid
 
 A flexible and responsive 12 column grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
 
-Supported: IE9+, Chrome, Firefox, Safari
+<strong>Supported:</strong> IE9+, Chrome, Firefox, Safari
 
-To support IE6-8: add https://github.com/scottjehl/Respond to your project ( adds support for media queries).
+<strong>To support IE7-8:</strong> add https://github.com/scottjehl/Respond to your project ( adds support for media queries).
 
 ##Basic Anatomy
 
