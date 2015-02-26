@@ -39,10 +39,11 @@ Columns are used to split content horizontally. Column widths are set in percent
 
 `<div class = "col-6-12"></div>`<br>
 `<div class = "col-4-12"></div>`<br>
-`<div class = "col-2-12"></div>`<br>
+`<div class = "col-2-12 col-last"></div>`<br>
 
 I have decided not to declare any padding to the columns themselves as this has caused issues with uneven widths when nesting columns ( more on nesting later ).  Instead each column needs to include a div with a 'col-content' class.  The actual columns content will be placed within this container.
 
+The last column in each row needs the '.col-last' class applied to allow columns to display correctly in IE7-8.
 
 ######Example
 
@@ -57,7 +58,7 @@ Layout columns widths are defined as x columns out of 12.  Ranging from 1 column
 
 `<div class = "col-6-12"></div>`<br>
 `<div class = "col-4-12"></div>`<br>
-`<div class = "col-2-12"></div>`<br>
+`<div class = "col-2-12 col-last"></div>`<br>
 
 
 ####Content Columns
@@ -68,7 +69,7 @@ Content columns are divided equally by 100% and are represented by an appropriat
 
 `<div class = "col-1-3"></div>`<br>
 `<div class = "col-1-3"></div>`<br>
-`<div class = "col-1-3"></div>`<br>
+`<div class = "col-1-3 col-last"></div>`<br>
 
 or
 
@@ -76,7 +77,7 @@ or
 `<div class = "col-1-5"></div>`<br>
 `<div class = "col-1-5"></div>`<br>
 `<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5"></div>`<br>
+`<div class = "col-1-5 col-last"></div>`<br>
 
 Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
 
