@@ -29,9 +29,6 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     'css/grid.min.css': ['css/grid.css']
-                },
-                files: {
-                    'css/grid-ie.min.css': ['css/grid-ie.css']
                 }
             }
         },

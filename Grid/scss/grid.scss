@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------
 
 //maximum width of container element, can be set to 100% if you want full screen.
-$container-width: 100%;
+$container-width: 71.25em;
 $row-fixed-width: 71.25em;
 
 //Select how many columns you want in your grid. 12, 24 etc.
@@ -11,8 +11,8 @@ $columns: 12;
 $ratio: 1.618;
 
 //Adds unit measurement to $ratio value.
-$padding-side: ($ratio / 2) + em;
-$padding-bottom: $ratio + em;
+$margin-side: ($ratio / 2) + em;
+$margin-bottom: $ratio + em;
 
 //Breakpoint values
 $exsm-bp: 25em;
@@ -45,22 +45,22 @@ $lg-bp: 62.5em;
     clear: both;
 }
 
-.row-fixed{
+/*.row-fixed{
     max-width: $row-fixed-width;
     margin: 0 auto;
-}
+}*/
 
 [class^=col]{
     width: 100%;
-    margin-bottom: $padding-bottom;
+    margin-bottom: $margin-bottom;
 }
 
-[class^=col] [class^=col]:last-child{
+/*[class^=col] [class^=col]:last-child{
     margin-bottom: 0;
-}
+}*/
 
 .grid-content{
-    margin: 0 $padding-side;
+    margin: 0 $margin-side;
 }
 
 .grid-content{
@@ -72,9 +72,6 @@ $lg-bp: 62.5em;
     margin-right: 0;
     margin-left: 0;
 }
-
-
-
 
 
 /* -------------------------------------------------------------------------
@@ -346,6 +343,16 @@ $lg-bp: 62.5em;
 
 .float-right{
     float: right;
+}
+
+.col-last{
+   width: auto !important;
+   float: none !important;
+   overflow: hidden !important;
+}
+
+[class^=col] [class^=col].col-last{
+    margin-bottom: 0;
 }
 
 /* -------------------------------------------------------------------------

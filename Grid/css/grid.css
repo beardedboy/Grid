@@ -2,7 +2,7 @@
  Grid System
 ---------------------------------------------------------------------------- */
 .container {
-  max-width: 100%;
+  max-width: 71.25em;
   margin: 0 auto;
 }
 
@@ -22,20 +22,18 @@
   clear: both;
 }
 
-.row-fixed {
-  max-width: 71.25em;
-  margin: 0 auto;
-}
-
+/*.row-fixed{
+    max-width: $row-fixed-width;
+    margin: 0 auto;
+}*/
 [class^=col] {
   width: 100%;
   margin-bottom: 1.618em;
 }
 
-[class^=col] [class^=col]:last-child {
-  margin-bottom: 0;
-}
-
+/*[class^=col] [class^=col]:last-child{
+    margin-bottom: 0;
+}*/
 .grid-content {
   margin: 0 0.809em;
 }
@@ -427,6 +425,16 @@
 
 .float-right {
   float: right;
+}
+
+.col-last {
+  width: auto !important;
+  float: none !important;
+  overflow: hidden !important;
+}
+
+[class^=col] [class^=col].col-last {
+  margin-bottom: 0;
 }
 
 /* -------------------------------------------------------------------------
