@@ -20,6 +20,13 @@ $sm-bp: 31.25em;
 $med-bp: 50em;
 $lg-bp: 62.5em;
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /* -------------------------------------------------------------------------
  Grid System
