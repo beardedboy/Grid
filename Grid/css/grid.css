@@ -10,15 +10,6 @@ html {
 /* -------------------------------------------------------------------------
  Grid System
 ---------------------------------------------------------------------------- */
-.grid_container {
-  max-width: 71.5em;
-  margin: 0 auto;
-}
-
-.grid_container-full {
-  max-width: 100%;
-}
-
 .grid_row {
   display: block;
   clear: both;
@@ -449,6 +440,15 @@ html {
 
 [class^=grid_col] [class^=grid_col].grid_col-last {
   margin-bottom: 0;
+}
+
+.container {
+  max-width: 71.5em;
+  margin: 0 auto;
+}
+
+.container-full {
+  max-width: 100%;
 }
 
 /* -------------------------------------------------------------------------
