@@ -10,8 +10,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {                         // Dictionary of files
-                    'css/grid.css': 'scss/grid.scss',
-                    'css/grid-ie.css': 'scss/grid-ie.scss'
+                    'css/grid.css': 'scss/grid.scss'
                 }
 
             }
