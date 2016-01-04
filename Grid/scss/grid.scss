@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------
 
 //maximum width of container element, can be set to 100% if you want full screen.
-$container-width: 71.5em;
+$wrapper-width: 71.5em;
 
 //Select how many columns you want in your grid. 12, 24 etc.
 $columns: 12;
@@ -14,10 +14,10 @@ $margin-side: ($ratio / 2) + em;
 $margin-bottom: $ratio + em;
 
 //Breakpoint values
-$exsm-bp: 25em;
-$sm-bp: 31.25em;
-$med-bp: 50em;
-$lg-bp: 62.5em;
+$extsm-bp: 	25em;
+$sm-bp: 	31.25em;
+$med-bp: 	50em;
+$lg-bp: 	62.5em;
 
 html {
   box-sizing: border-box;
@@ -74,29 +74,61 @@ html {
  Layout Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {
+
+
+[class*=grid_offset]{
+    float:none;
 }
+
+@media screen and (min-width: $extsm-bp) {
+
+	[class^=grid_col]{
+	    float: left;
+	}
+
+	[class^=grid_col] [class^=grid_col]{
+    	margin-bottom: 0;
+	}
+	
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_col_extsm-#{$i}_#{$columns} {
+           width: $val;
+            @if $i == $columns {
+        		float: none;
+        	}
+        }
+    }
+
+}// END EXTRA SMALL BREAKPOINT
 
 @media screen and (min-width: $sm-bp) {
+	
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
 
-}
+        .grid_col_sm-#{$i}_#{$columns} {
+           width: $val;
+            @if $i == $columns {
+        		float: none;
+        	}
+        }
+    }
+
+}//END SMALL BREAKPOINT
 
 
 @media screen and (min-width: $med-bp) {
 
-    [class^=grid_col]{
-        float: left;
-    }
-
-    [class*=grid_offset], .grid_col-12_12{
-        float:none;
-    }
-
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col-#{$i}_#{$columns} {
+        .grid_col_med-#{$i}_#{$columns} {
            width: $val;
+            @if $i == $columns {
+        		float: none;
+        	}
         }
     }
 
@@ -108,232 +140,231 @@ html {
         width: percentage( 1 / $ratio );
     }
 
-    [class^=grid_col] [class^=grid_col]{
-        margin-bottom: 0;
-    }
 
-}
+}//END MEDIUM BREAKPOINT
+
 
 @media screen and (min-width: $lg-bp) {
-}
+
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_col_lg-#{$i}_#{$columns} {
+            width: $val;
+            @if $i == $columns {
+        		float: none;
+        	}
+        }
+    }
+
+}// END LARGE BREAKPOINT
 
 
 /* -------------------------------------------------------------------------
  Layout grid_Offset Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
+@media screen and (min-width: $extsm-bp) {
+        @for $i from 1 through ($columns - 1) {
+        
+        $val: ( 100% / $columns ) * $i;
 
-@media screen and (min-width: $sm-bp) {}
+        .grid_offset_extsm-#{$i}_#{$columns} {
+            margin-left: $val;
+        }
 
+        .grid_offset_extsm-reset{
+            margin-left: 0;
+        }
+
+    }
+}
+
+@media screen and (min-width: $sm-bp) {
+        @for $i from 1 through ($columns - 1) {
+        
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_offset_sm-#{$i}_#{$columns} {
+            margin-left: $val;
+        }
+
+        .grid_offset_sm-reset{
+            margin-left: 0;
+        }
+
+
+    }
+}
 
 @media screen and (min-width: $med-bp) {
 
     @for $i from 1 through ($columns - 1) {
+        
         $val: ( 100% / $columns ) * $i;
 
-        .grid_offset-#{$i}_#{$columns} {
+        .grid_offset_med-#{$i}_#{$columns} {
             margin-left: $val;
         }
+
+        .grid_offset_med-reset{
+            margin-left: 0;
+        }
+
+
     }
 }
 
-@media screen and (min-width: $lg-bp) {}
+@media screen and (min-width: $lg-bp) {
+        @for $i from 1 through ($columns - 1) {
+        
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_offset_lg-#{$i}_#{$columns} {
+            margin-left: $val;
+        }
+
+        .grid_offset_lg-reset{
+            margin-left: 0;
+        }
+
+
+    }
+}
 
 
 /* -------------------------------------------------------------------------
  Content Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
-
-@media screen and (min-width: $sm-bp) {}
-
-
-@media screen and (min-width: $med-bp) {
-
-    @for $i from 1 through $columns {
+@media screen and (min-width: $extsm-bp) {
+	@for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col-1_#{$columns - $i + 1} {
-            @if $i == $columns { float: none; }
+        .grid_col_extsm-1_#{$columns - $i + 1} {
             width: (100% / ($columns - $i + 1) );
+            @if $i == $columns { float: none; }
         }
     }
 }
 
-@media screen and (min-width: $lg-bp) {}
+@media screen and (min-width: $sm-bp) {
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_col_sm-1_#{$columns - $i + 1} {
+            width: (100% / ($columns - $i + 1) );
+            @if $i == $columns { float: none; }
+        }
+    }
+}
+
+
+@media screen and (min-width: $med-bp) {
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_col_med-1_#{$columns - $i + 1} {
+            width: (100% / ($columns - $i + 1) );
+            @if $i == $columns { float: none; }
+        }
+    }
+}
+
+@media screen and (min-width: $lg-bp) {
+	@for $i from 1 through $columns {
+        $val: ( 100% / $columns ) * $i;
+
+        .grid_col_lg-1_#{$columns - $i + 1} {
+            width: (100% / ($columns - $i + 1) );
+            @if $i == $columns { float: none; }
+        }
+    }
+}
 
 
 /* -------------------------------------------------------------------------
  Content Offset Columns
 ---------------------------------------------------------------------------- */
 
-@media screen and (min-width: $exsm-bp) {}
+@media screen and (min-width: $extsm-bp) {
+    $i: $columns;
 
-@media screen and (min-width: $sm-bp) {}
+    @while $i > 1 {
+
+        @for $j from 1 through $i - 1 {
+
+            $margin: ( 100% / $i ) * $j;
+
+            .grid_offset_extsm-#{$j}_#{$i} {
+                margin-left: $margin;
+            }
+        } //END FOR
+
+        $i: $i - 1;
+
+    } //END WHILE 
+}
+
+@media screen and (min-width: $sm-bp) {
+    $i: $columns;
+
+    @while $i > 1 {
+
+        @for $j from 1 through $i - 1 {
+
+            $margin: ( 100% / $i ) * $j;
+
+            .grid_offset_sm-#{$j}_#{$i} {
+                margin-left: $margin;
+            }
+        } //END FOR
+
+        $i: $i - 1;
+
+    } //END WHILE 
+}
 
 
 @media screen and (min-width: $med-bp) {
 
-    .grid_offset-1_2, .grid_offset-2_4, .grid_offset-3_6, .grid_offset-4_8, .grid_offset-5_10, .grid_offset-6_12{
-        margin-left: 50%;
-    }
-    .grid_offset-1_3{
-        margin-left: 33.33333%;
-    }
-    .grid_offset-2_3{
-        margin-left: 66.66667%;
-    }
-    .grid_offset-1_4, .grid_offset-2_8, .grid_offset-3_12{
-        margin-left: 25%;
-    }
-    .grid_offset-3_4, .grid_offset-6_8, .grid_offset-9_12{
-        margin-left: 75%;
-    }
+    $i: $columns;
 
-    .grid_offset-1_5, .grid_offset-2_10{
-        margin-left: 20%;
-    }
-    .grid_offset-2_5, .grid_offset-4_10{
-        margin-left: 40%;
-    }
-    .grid_offset-3_5, .grid_offset-6_10{
-        margin-left: 60%;
-    }
-    .grid_offset-4_5, .grid_offset-8_10{
-        margin-left: 80%;
-    }
-    .grid_offset-1_6, .grid_offset-2_12{
-        margin-left: 16.6666666%;
-    }
-    .grid_offset-2_6, .grid_offset-4_12{
-        margin-left: 33.3333333%;
-    }
-    .grid_offset-4_6, .grid_offset-8_12{
-        margin-left: 66.6666666%;
-    }
-    .grid_offset-5_6, .grid_offset-10_12{
-        margin-left: 83.3333333%;
-    }
+    @while $i > 1 {
 
-    .grid_offset-1_7{
-        margin-left: 14.2857142%;
-    }
-    .grid_offset-2_7{
-        margin-left: 28.5714285%;
-    }
-    .grid_offset-3_7{
-        margin-left: 42.8571428%;
-    }
-    .grid_offset-4_7{
-        margin-left: 57.1428571%;
-    }
-    .grid_offset-5_7{
-        margin-left: 71.4285714%;
-    }
-    .grid_offset-6_7{
-        margin-left: 85.7142857%;
-    }
+        @for $j from 1 through $i - 1 {
 
-    .grid_offset-1_8{
-        margin-left: 12.5%;
-    }
-    .grid_offset-3_8{
-        margin-left: 37.5%;
-    }
-    .grid_offset-5_8{
-        margin-left: 62.5%;
-    }
-    .grid_offset-7_8{
-        margin-left: 87.5%;
-    }
+            $margin: ( 100% / $i ) * $j;
 
-    .grid_offset-1_9{
-        margin-left: 11.1111111%;
-    }
-    .grid_offset-2_9{
-        margin-left: 22.2222222%;
-    }
-    .grid_offset-3_9{
-        margin-left: 33.3333333%;
-    }
-    .grid_offset-4_9{
-        margin-left: 44.4444444%;
-    }
-    .grid_offset-5_9{
-        margin-left: 55.5555555%;
-    }
-    .grid_offset-6_9{
-        margin-left: 66.6666666%;
-    }
-    .grid_offset-7_9{
-        margin-left: 77.7777777%;
-    }
-    .grid_offset-8_9{
-        margin-left: 88.8888888%;
-    }
+            .grid_offset_med-#{$j}_#{$i} {
+                margin-left: $margin;
+            }
+        } //END FOR
 
-    .grid_offset-1_10{
-        margin-left: 10%;
-    }
-    .grid_offset-3_10{
-        margin-left: 30%;
-    }
-    .grid_offset-7_10{
-        margin-left: 70%;
-    }
-    .grid_offset-9_10{
-        margin-left: 90%;
-    }
+        $i: $i - 1;
 
-    .grid_offset-1_11{
-        margin-left: 9.090909%;
-    }
-    .grid_offset-2_11{
-        margin-left: 18.18181%;
-    }
-    .grid_offset-3_11{
-        margin-left: 27.27272%;
-    }
-    .grid_offset-4_11{
-        margin-left: 36.36363%;
-    }
-    .grid_offset-5_11{
-        margin-left: 45.45454%;
-    }
-    .grid_offset-6_11{
-        margin-left: 54.54545%;
-    }
-    .grid_offset-7_11{
-        margin-left: 63.63636%;
-    }
-    .grid_offset-8_11{
-        margin-left: 72.72727%;
-    }
-    .grid_offset-9_11{
-        margin-left: 81.81818%;
-    }
-    .grid_offset-10_11{
-        margin-left: 90.90909%;
-    }
-
-    .grid_offset-1_12{
-        margin-left: 8.33333333%;
-    }
-    .grid_offset-5_12{
-        margin-left: 41.66666666666665%;
-    }
-    .grid_offset-7_12{
-        margin-left: 58.33333333333331%;
-    }
-    .grid_offset-11_12{
-        margin-left: 91.66666666666663%;
-    }
+    } //END WHILE 
 
 }
 
-@media screen and (min-width: $lg-bp) {}
+@media screen and (min-width: $lg-bp) {
+    $i: $columns;
+
+    @while $i > 1 {
+
+        @for $j from 1 through $i - 1 {
+
+            $margin: ( 100% / $i ) * $j;
+
+            .grid_offset_lg-#{$j}_#{$i} {
+                margin-left: $margin;
+            }
+        } //END FOR
+
+        $i: $i - 1;
+
+    } //END WHILE 
+}
 
 
 /* -------------------------------------------------------------------------
@@ -354,16 +385,50 @@ html {
    overflow: hidden !important;
 }
 
-[class^=grid_col] [class^=grid_col].grid_col-last{
+@media screen and (min-width: $extsm-bp) {
+    .grid_col_extsm-last{
+       width: auto !important;
+       float: none !important;
+       overflow: hidden !important;
+    }
+}
+
+@media screen and (min-width: $sm-bp) {
+    .grid_col_sm-last{
+       width: auto !important;
+       float: none !important;
+       overflow: hidden !important;
+    }
+}
+
+
+@media screen and (min-width: $med-bp) {
+    .grid_col_med-last{
+       width: auto !important;
+       float: none !important;
+       overflow: hidden !important;
+    }
+}
+
+@media screen and (min-width: $lg-bp) {
+    .grid_col_lg-last{
+       width: auto !important;
+       float: none !important;
+       overflow: hidden !important;
+    }
+}
+
+[class^=grid_col] [class^=grid_col].grid_col-last, 
+[class^=grid_col] [class^=grid_col]:last-child {
     margin-bottom: 0;
 }
 
-.container{
-    max-width: $container-width;
+.wrapper{
+    max-width: $wrapper-width;
     margin: 0 auto;
 }
 
-.container-full{
+.wrapper-full{
     max-width: 100%;
 }
 
