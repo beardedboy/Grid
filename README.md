@@ -1,7 +1,7 @@
 # Grid
-A lightweight CSS responsive grid
+A CSS responsive grid
 
-A flexible and responsive 12 column grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
+A flexible and responsive X column grid system build in SCSS, compiled to CSS and designed to be a solid starting point to creating a grid system for your next web project.
 
 <strong>Supported:</strong> IE9+, Chrome, Firefox, Safari
 
