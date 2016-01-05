@@ -1,0 +1,41 @@
+
+//---------------------------------------------------------------------------
+// Base Styles
+//----------------------------------------------------------------------------
+
+.grid_row{
+    display: block;
+    clear: both;
+    *zoom: 1;
+    margin: 0 (-$margin-side);
+}
+.grid_row{
+    zoom: 1;
+    position: relative;
+}
+
+.grid_row .grid_row{
+    margin: 0;
+}
+
+.grid_row:before,
+.grid_row:after {
+    content: " ";
+    display: table;
+}
+
+.grid_row:after {
+    clear: both;
+}
+
+[class^=grid_col]{
+    width: 100%;
+    margin-bottom: $margin-bottom;
+}
+
+.grid_content{
+    background-color: #ffcc66;
+    word-wrap: break-word;
+    margin: 0 $margin-side;
+    padding: 0 $margin-side;
+}

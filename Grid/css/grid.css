@@ -1,3 +1,9 @@
+/**
+ * grid.scss
+ */
+/* ==========================================================================
+   Globals
+   ========================================================================== */
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -7,9 +13,9 @@ html {
   box-sizing: inherit;
 }
 
-/* -------------------------------------------------------------------------
- Grid System
----------------------------------------------------------------------------- */
+/* ==========================================================================
+   Base
+   ========================================================================== */
 .grid_row {
   display: block;
   clear: both;
@@ -48,9 +54,9 @@ html {
   padding: 0 0.809em;
 }
 
-/* -------------------------------------------------------------------------
- Layout Columns
----------------------------------------------------------------------------- */
+/* ==========================================================================
+   Columns
+   ========================================================================== */
 [class*=grid_offset] {
   float: none;
 }
@@ -271,192 +277,6 @@ html {
     float: none;
   }
 }
-/* -------------------------------------------------------------------------
- Layout grid_Offset Columns
----------------------------------------------------------------------------- */
-@media screen and (min-width: 25em) {
-  .grid_offset_extsm-1_12 {
-    margin-left: 8.33333%;
-  }
-
-  .grid_offset_extsm-2_12 {
-    margin-left: 16.66667%;
-  }
-
-  .grid_offset_extsm-3_12 {
-    margin-left: 25%;
-  }
-
-  .grid_offset_extsm-4_12 {
-    margin-left: 33.33333%;
-  }
-
-  .grid_offset_extsm-5_12 {
-    margin-left: 41.66667%;
-  }
-
-  .grid_offset_extsm-6_12 {
-    margin-left: 50%;
-  }
-
-  .grid_offset_extsm-7_12 {
-    margin-left: 58.33333%;
-  }
-
-  .grid_offset_extsm-8_12 {
-    margin-left: 66.66667%;
-  }
-
-  .grid_offset_extsm-9_12 {
-    margin-left: 75%;
-  }
-
-  .grid_offset_extsm-10_12 {
-    margin-left: 83.33333%;
-  }
-
-  .grid_offset_extsm-11_12 {
-    margin-left: 91.66667%;
-  }
-}
-@media screen and (min-width: 31.25em) {
-  .grid_offset_sm-1_12 {
-    margin-left: 8.33333%;
-  }
-
-  .grid_offset_sm-2_12 {
-    margin-left: 16.66667%;
-  }
-
-  .grid_offset_sm-3_12 {
-    margin-left: 25%;
-  }
-
-  .grid_offset_sm-4_12 {
-    margin-left: 33.33333%;
-  }
-
-  .grid_offset_sm-5_12 {
-    margin-left: 41.66667%;
-  }
-
-  .grid_offset_sm-6_12 {
-    margin-left: 50%;
-  }
-
-  .grid_offset_sm-7_12 {
-    margin-left: 58.33333%;
-  }
-
-  .grid_offset_sm-8_12 {
-    margin-left: 66.66667%;
-  }
-
-  .grid_offset_sm-9_12 {
-    margin-left: 75%;
-  }
-
-  .grid_offset_sm-10_12 {
-    margin-left: 83.33333%;
-  }
-
-  .grid_offset_sm-11_12 {
-    margin-left: 91.66667%;
-  }
-}
-@media screen and (min-width: 50em) {
-  .grid_offset_med-1_12 {
-    margin-left: 8.33333%;
-  }
-
-  .grid_offset_med-2_12 {
-    margin-left: 16.66667%;
-  }
-
-  .grid_offset_med-3_12 {
-    margin-left: 25%;
-  }
-
-  .grid_offset_med-4_12 {
-    margin-left: 33.33333%;
-  }
-
-  .grid_offset_med-5_12 {
-    margin-left: 41.66667%;
-  }
-
-  .grid_offset_med-6_12 {
-    margin-left: 50%;
-  }
-
-  .grid_offset_med-7_12 {
-    margin-left: 58.33333%;
-  }
-
-  .grid_offset_med-8_12 {
-    margin-left: 66.66667%;
-  }
-
-  .grid_offset_med-9_12 {
-    margin-left: 75%;
-  }
-
-  .grid_offset_med-10_12 {
-    margin-left: 83.33333%;
-  }
-
-  .grid_offset_med-11_12 {
-    margin-left: 91.66667%;
-  }
-}
-@media screen and (min-width: 62.5em) {
-  .grid_offset_lg-1_12 {
-    margin-left: 8.33333%;
-  }
-
-  .grid_offset_lg-2_12 {
-    margin-left: 16.66667%;
-  }
-
-  .grid_offset_lg-3_12 {
-    margin-left: 25%;
-  }
-
-  .grid_offset_lg-4_12 {
-    margin-left: 33.33333%;
-  }
-
-  .grid_offset_lg-5_12 {
-    margin-left: 41.66667%;
-  }
-
-  .grid_offset_lg-6_12 {
-    margin-left: 50%;
-  }
-
-  .grid_offset_lg-7_12 {
-    margin-left: 58.33333%;
-  }
-
-  .grid_offset_lg-8_12 {
-    margin-left: 66.66667%;
-  }
-
-  .grid_offset_lg-9_12 {
-    margin-left: 75%;
-  }
-
-  .grid_offset_lg-10_12 {
-    margin-left: 83.33333%;
-  }
-
-  .grid_offset_lg-11_12 {
-    margin-left: 91.66667%;
-  }
-}
-/* -------------------------------------------------------------------------
- Content Columns
----------------------------------------------------------------------------- */
 @media screen and (min-width: 25em) {
   .grid_col_extsm-1_12 {
     width: 8.33333%;
@@ -657,9 +477,189 @@ html {
     float: none;
   }
 }
-/* -------------------------------------------------------------------------
- Content Offset Columns
----------------------------------------------------------------------------- */
+/* ==========================================================================
+   Offsets
+   ========================================================================== */
+@media screen and (min-width: 25em) {
+  .grid_offset_extsm-1_12 {
+    margin-left: 8.33333%;
+  }
+
+  .grid_offset_extsm-2_12 {
+    margin-left: 16.66667%;
+  }
+
+  .grid_offset_extsm-3_12 {
+    margin-left: 25%;
+  }
+
+  .grid_offset_extsm-4_12 {
+    margin-left: 33.33333%;
+  }
+
+  .grid_offset_extsm-5_12 {
+    margin-left: 41.66667%;
+  }
+
+  .grid_offset_extsm-6_12 {
+    margin-left: 50%;
+  }
+
+  .grid_offset_extsm-7_12 {
+    margin-left: 58.33333%;
+  }
+
+  .grid_offset_extsm-8_12 {
+    margin-left: 66.66667%;
+  }
+
+  .grid_offset_extsm-9_12 {
+    margin-left: 75%;
+  }
+
+  .grid_offset_extsm-10_12 {
+    margin-left: 83.33333%;
+  }
+
+  .grid_offset_extsm-11_12 {
+    margin-left: 91.66667%;
+  }
+}
+@media screen and (min-width: 31.25em) {
+  .grid_offset_sm-1_12 {
+    margin-left: 8.33333%;
+  }
+
+  .grid_offset_sm-2_12 {
+    margin-left: 16.66667%;
+  }
+
+  .grid_offset_sm-3_12 {
+    margin-left: 25%;
+  }
+
+  .grid_offset_sm-4_12 {
+    margin-left: 33.33333%;
+  }
+
+  .grid_offset_sm-5_12 {
+    margin-left: 41.66667%;
+  }
+
+  .grid_offset_sm-6_12 {
+    margin-left: 50%;
+  }
+
+  .grid_offset_sm-7_12 {
+    margin-left: 58.33333%;
+  }
+
+  .grid_offset_sm-8_12 {
+    margin-left: 66.66667%;
+  }
+
+  .grid_offset_sm-9_12 {
+    margin-left: 75%;
+  }
+
+  .grid_offset_sm-10_12 {
+    margin-left: 83.33333%;
+  }
+
+  .grid_offset_sm-11_12 {
+    margin-left: 91.66667%;
+  }
+}
+@media screen and (min-width: 50em) {
+  .grid_offset_med-1_12 {
+    margin-left: 8.33333%;
+  }
+
+  .grid_offset_med-2_12 {
+    margin-left: 16.66667%;
+  }
+
+  .grid_offset_med-3_12 {
+    margin-left: 25%;
+  }
+
+  .grid_offset_med-4_12 {
+    margin-left: 33.33333%;
+  }
+
+  .grid_offset_med-5_12 {
+    margin-left: 41.66667%;
+  }
+
+  .grid_offset_med-6_12 {
+    margin-left: 50%;
+  }
+
+  .grid_offset_med-7_12 {
+    margin-left: 58.33333%;
+  }
+
+  .grid_offset_med-8_12 {
+    margin-left: 66.66667%;
+  }
+
+  .grid_offset_med-9_12 {
+    margin-left: 75%;
+  }
+
+  .grid_offset_med-10_12 {
+    margin-left: 83.33333%;
+  }
+
+  .grid_offset_med-11_12 {
+    margin-left: 91.66667%;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .grid_offset_lg-1_12 {
+    margin-left: 8.33333%;
+  }
+
+  .grid_offset_lg-2_12 {
+    margin-left: 16.66667%;
+  }
+
+  .grid_offset_lg-3_12 {
+    margin-left: 25%;
+  }
+
+  .grid_offset_lg-4_12 {
+    margin-left: 33.33333%;
+  }
+
+  .grid_offset_lg-5_12 {
+    margin-left: 41.66667%;
+  }
+
+  .grid_offset_lg-6_12 {
+    margin-left: 50%;
+  }
+
+  .grid_offset_lg-7_12 {
+    margin-left: 58.33333%;
+  }
+
+  .grid_offset_lg-8_12 {
+    margin-left: 66.66667%;
+  }
+
+  .grid_offset_lg-9_12 {
+    margin-left: 75%;
+  }
+
+  .grid_offset_lg-10_12 {
+    margin-left: 83.33333%;
+  }
+
+  .grid_offset_lg-11_12 {
+    margin-left: 91.66667%;
+  }
+}
 @media screen and (min-width: 25em) {
   .grid_offset_extsm-1_12 {
     margin-left: 8.33333%;
@@ -1720,9 +1720,9 @@ html {
     margin-left: 50%;
   }
 }
-/* -------------------------------------------------------------------------
-Grid_Offset Column Resets
----------------------------------------------------------------------------- */
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
 @media screen and (min-width: 25em) {
   .grid_offset_extsm-reset {
     margin-left: 0;
@@ -1743,9 +1743,6 @@ Grid_Offset Column Resets
     margin-left: 0;
   }
 }
-/* -------------------------------------------------------------------------
- Grid Helper Classes
----------------------------------------------------------------------------- */
 .float-left {
   float: left;
 }
@@ -1802,9 +1799,9 @@ Grid_Offset Column Resets
   max-width: 100%;
 }
 
-/* -------------------------------------------------------------------------
- Presentation only
----------------------------------------------------------------------------- */
+/* ==========================================================================
+   Presentation
+   ========================================================================== */
 .pres-spacing {
   height: 100px;
 }

@@ -1,0 +1,28 @@
+
+//----------------------------------------------------------------------------
+// Presentation only
+//----------------------------------------------------------------------------
+
+.pres-spacing{
+    height: 100px;
+}
+
+.pres-heading{
+    line-height: 100px;
+}
+
+.color{
+    background-color: #ffcc66;
+}
+
+/*[class^=col]:nth-child(odd) .grid-content{
+    background-color: #ffcc66;
+}*/
+
+[class^=grid_col] h3{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    font-size: 13px;
+}
