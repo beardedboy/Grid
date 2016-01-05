@@ -165,7 +165,8 @@ html {
 ---------------------------------------------------------------------------- */
 
 @media screen and (min-width: $extsm-bp) {
-        @for $i from 1 through ($columns - 1) {
+    
+    @for $i from 1 through ($columns - 1) {
         
         $val: ( 100% / $columns ) * $i;
 
@@ -173,15 +174,13 @@ html {
             margin-left: $val;
         }
 
-        .grid_offset_extsm-reset{
-            margin-left: 0;
-        }
-
     }
+
 }
 
 @media screen and (min-width: $sm-bp) {
-        @for $i from 1 through ($columns - 1) {
+    
+    @for $i from 1 through ($columns - 1) {
         
         $val: ( 100% / $columns ) * $i;
 
@@ -189,12 +188,8 @@ html {
             margin-left: $val;
         }
 
-        .grid_offset_sm-reset{
-            margin-left: 0;
-        }
-
-
     }
+
 }
 
 @media screen and (min-width: $med-bp) {
@@ -206,30 +201,21 @@ html {
         .grid_offset_med-#{$i}_#{$columns} {
             margin-left: $val;
         }
-
-        .grid_offset_med-reset{
-            margin-left: 0;
-        }
-
-
     }
+
 }
 
 @media screen and (min-width: $lg-bp) {
-        @for $i from 1 through ($columns - 1) {
+    
+    @for $i from 1 through ($columns - 1) {
         
         $val: ( 100% / $columns ) * $i;
 
         .grid_offset_lg-#{$i}_#{$columns} {
             margin-left: $val;
         }
-
-        .grid_offset_lg-reset{
-            margin-left: 0;
-        }
-
-
     }
+
 }
 
 
@@ -364,6 +350,36 @@ html {
         $i: $i - 1;
 
     } //END WHILE 
+}
+
+
+/* -------------------------------------------------------------------------
+Grid_Offset Column Resets
+---------------------------------------------------------------------------- */
+
+@media screen and (min-width: $extsm-bp) {
+    .grid_offset_extsm-reset{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: $sm-bp) {
+    .grid_offset_sm-reset{
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (min-width: $med-bp) {
+    .grid_offset_med-reset{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: $lg-bp) {
+    .grid_offset_lg-reset{
+        margin-left: 0;
+    }
 }
 
 
