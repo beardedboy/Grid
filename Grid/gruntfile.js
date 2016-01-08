@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {                         // Dictionary of files
-                    'css/grid.css': 'scss/grid.scss'
+                    'css/grid.css': 'scss/grid.scss',
+                    'css/flex-grid.css': 'scss/flex-grid.scss'
                 }
 
             }
@@ -27,13 +28,14 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    'css/grid.min.css': ['css/grid.css']
+                    'css/grid.min.css': ['css/grid.css'],
+                    'css/flex-grid.min.css': ['css/flex-grid.css']
                 }
             }
         },
         watch: {
             sass: {
-                files: 'scss/*.scss',
+                files: ['scss/partials/*.scss', 'scss/flex-partials/*.scss'],
                 tasks: ['sass','autoprefixer','cssmin'],
                 options: {
                     spawn: false,

@@ -6,6 +6,7 @@
    ========================================================================== */
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -1783,10 +1784,6 @@ html {
   margin-bottom: 0;
 }
 
-.wrapper, .wrapper-full {
-  overflow-x: hidden;
-}
-
 .wrapper {
   max-width: 71.5em;
   margin: 0 auto;
@@ -1817,4 +1814,4 @@ html {
   background-color: #ffcc66;
 }
 
-/*# sourceMappingURL=grid.css.map */
+/*# sourceMappingURL=flex-grid.css.map */
