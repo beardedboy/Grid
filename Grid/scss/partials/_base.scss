@@ -15,7 +15,7 @@
 }
 
 .grid_row .grid_row{
-    margin: 0 (-$margin-side);    
+    margin: 0 (-$margin-side) (-$margin-bottom) (-$margin-side);    
 }
 
 .grid_row:before,

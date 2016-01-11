@@ -4,28 +4,12 @@
 //----------------------------------------------------------------------------
 
 .grid_row{
-    display: block;
-    clear: both;
-    *zoom: 1;
+    display: flex;
     margin: 0 (-$margin-side);
-}
-.grid_row{
-    zoom: 1;
-    position: relative;
 }
 
 .grid_row .grid_row{
     margin: 0 (-$margin-side);    
-}
-
-.grid_row:before,
-.grid_row:after {
-    content: " ";
-    display: table;
-}
-
-.grid_row:after {
-    clear: both;
 }
 
 [class^=grid_col]{

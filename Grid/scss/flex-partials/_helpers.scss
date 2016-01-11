@@ -40,7 +40,7 @@
     float: right;
 }
 
-.grid_col-last{
+/*.grid_col-last{
    width: auto !important;
    float: none !important;
    overflow: hidden !important;
@@ -77,11 +77,15 @@
        float: none !important;
        overflow: hidden !important;
     }
-}
+}*/
 
-[class^=grid_col] [class^=grid_col].grid_col-last, 
+[class^=grid_col] [class^=grid_col] .grid_col-last, 
 [class^=grid_col] [class^=grid_col]:last-child {
     margin-bottom: 0;
+}
+
+.wrapper, .wrapper-full{
+  overflow-x: hidden; 
 }
 
 .wrapper{

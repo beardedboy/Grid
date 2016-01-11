@@ -2,12 +2,12 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" grid_content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Grid</title>
-        <meta name="description" grid_content="">
-        <meta name="viewport" grid_content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/vendor/modernizr-custom.js"></script>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/grid.min.css">
 
@@ -16,8 +16,6 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <div class = "test"></div>
 
         <div class = "wrapper">
             <h3 class = "pres-heading">Layout Columns</h3>
@@ -36,10 +34,13 @@
                 <div class="grid_col_extsm-10_12"><h3>10-12</h3></div>
             </div>
             <div class = "grid_row">
-                <div class="grid_col_extsm-3_12 grid_col_lg-6_12"><h3>3-12</h3></div>
-                <div class="grid_col_extsm-3_12 grid_col_lg-6_12"><h3>3-12</h3></div>
-                <div class="grid_col_extsm-3_12 grid_col_lg-6_12"><h3>3-12</h3></div>
-                <div class="grid_col_extsm-3_12 grid_col_lg-6_12"><h3>3-12</h3></div>
+                <div class="grid_col_med-6_12 grid_col_lg-3_12">
+                <h3>extsm 3-12 lg 6-12 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis est est, lobortis cursus enim placerat vel. Morbi sagittis eu ante vehicula bibendum. Vivamus sit amet ipsum ac ligula fermentum euismod eu sit amet sem. Sed in arcu maximus, aliquet tellus blandit, laoreet lorem. Morbi sed maximus odio. Duis sed orci sem. In urna nibh, tempor non interdum at, egestas porta lorem. Mauris vel lacus viverra sem luctus tristique. Nam aliquet tempus libero ac iaculis. Maecenas et sapien sit amet nibh gravida blandit. Maecenas quis porta turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam dictum imperdiet condimentum. In et tincidunt lorem, non suscipit felis.</p>
+                </div>
+                <div class="grid_col_med-6_12 grid_col_lg-3_12"><h3>extsm 3-12 lg 6-12 2</h3></div>
+                <div class="grid_col_med-6_12 grid_col_med-clear_float grid_col_lg-3_12 grid_col_lg-reset_float"><h3>extsm 3-12 lg 6-12 3</h3></div>
+                <div class="grid_col_med-6_12 grid_col_lg-3_12"><h3>extsm 3-12 lg 6-12 4</h3></div>
               
             </div>
             <div class = "grid_row">
@@ -51,7 +52,7 @@
                 <div class="grid_col_extsm-7_12">
                     <div class = "grid_row">
                         <div class="grid_col_extsm-4_12"><h3>Nested 4-12</h3></div>
-                        <div class="grid_col_extsm-8_12"><h3>Nested 8-12</h3></div>
+                        <div class="grid_col_extsm-8_12 grid_col-last"><h3>Nested 8-12</h3></div>
                     </div>
                 </div>
             </div>
@@ -63,7 +64,7 @@
 
         <div class = "wrapper-full">
             <div class = "grid_row">
-                <div class = "grid_col_extsm-12_12"><h3>FULL 12</h3></div>
+                <div class = "grid_col_extsm-12_12"><h3>Full Width Container</h3></div>
             </div>
         </div>
 
