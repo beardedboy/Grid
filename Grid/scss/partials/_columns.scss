@@ -12,7 +12,7 @@
 }
 
 
-@media screen and (min-width: $extsm-bp) {
+@include mq-breakpoint-upto($extsm) {
 
 	[class^=grid_col_extsm]{
         float: left;
@@ -35,7 +35,8 @@
 
 }// END EXTRA SMALL BREAKPOINT
 
-@media screen and (min-width: $sm-bp) {
+
+@include mq-breakpoint-upto($sm) {
 
     [class^=grid_col_sm]{
         float: left;
@@ -54,8 +55,7 @@
 
 }//END SMALL BREAKPOINT
 
-
-@media screen and (min-width: $med-bp) {
+@include mq-breakpoint-upto($med) {
 
     [class^=grid_col_med]{
         float: left;
@@ -75,7 +75,8 @@
 }//END MEDIUM BREAKPOINT
 
 
-@media screen and (min-width: $lg-bp) {
+
+@include mq-breakpoint-upto($lg) {
 
     [class^=grid_col_lg]{
         float: left;
@@ -100,7 +101,8 @@
 // Content Columns
 //----------------------------------------------------------------------------
 
-@media screen and (min-width: $extsm-bp) {
+
+@include mq-breakpoint-upto($extsm) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
@@ -111,7 +113,8 @@
     }
 }
 
-@media screen and (min-width: $sm-bp) {
+
+@include mq-breakpoint-upto($sm) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
@@ -122,8 +125,7 @@
     }
 }
 
-
-@media screen and (min-width: $med-bp) {
+@include mq-breakpoint-upto($med) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
@@ -134,7 +136,7 @@
     }
 }
 
-@media screen and (min-width: $lg-bp) {
+@include mq-breakpoint-upto($lg) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 

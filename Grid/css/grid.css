@@ -53,6 +53,7 @@ html {
 }
 
 @media screen and (min-width: 25em) {
+  /*Hello*/
   [class^=grid_col_extsm] {
     float: left;
   }
@@ -111,6 +112,7 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   [class^=grid_col_sm] {
     float: left;
   }
@@ -165,6 +167,7 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   [class^=grid_col_med] {
     float: left;
   }
@@ -219,6 +222,7 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   [class^=grid_col_lg] {
     float: left;
   }
@@ -273,6 +277,7 @@ html {
   }
 }
 @media screen and (min-width: 25em) {
+  /*Hello*/
   .grid_col_extsm-1_12 {
     width: 8.33333%;
   }
@@ -323,6 +328,7 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   .grid_col_sm-1_12 {
     width: 8.33333%;
   }
@@ -373,6 +379,7 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   .grid_col_med-1_12 {
     width: 8.33333%;
   }
@@ -423,6 +430,7 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   .grid_col_lg-1_12 {
     width: 8.33333%;
   }
@@ -476,6 +484,7 @@ html {
    Offsets
    ========================================================================== */
 @media screen and (min-width: 25em) {
+  /*Hello*/
   .grid_offset_extsm-1_12 {
     margin-left: 8.33333%;
   }
@@ -521,6 +530,7 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   .grid_offset_sm-1_12 {
     margin-left: 8.33333%;
   }
@@ -566,6 +576,7 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   .grid_offset_med-1_12 {
     margin-left: 8.33333%;
   }
@@ -611,6 +622,7 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   .grid_offset_lg-1_12 {
     margin-left: 8.33333%;
   }
@@ -656,6 +668,7 @@ html {
   }
 }
 @media screen and (min-width: 25em) {
+  /*Hello*/
   .grid_offset_extsm-1_12 {
     margin-left: 8.33333%;
   }
@@ -921,6 +934,7 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   .grid_offset_sm-1_12 {
     margin-left: 8.33333%;
   }
@@ -1186,6 +1200,7 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   .grid_offset_med-1_12 {
     margin-left: 8.33333%;
   }
@@ -1451,6 +1466,7 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   .grid_offset_lg-1_12 {
     margin-left: 8.33333%;
   }
@@ -1719,21 +1735,25 @@ html {
    Helpers
    ========================================================================== */
 @media screen and (min-width: 25em) {
+  /*Hello*/
   .grid_offset_extsm-reset {
     margin-left: 0;
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   .grid_offset_sm-reset {
     margin-left: 0;
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   .grid_offset_med-reset {
     margin-left: 0;
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   .grid_offset_lg-reset {
     margin-left: 0;
   }
@@ -1747,6 +1767,7 @@ html {
 }
 
 @media screen and (min-width: 25em) {
+  /*Hello*/
   .grid_col_extsm-clear_float {
     clear: both;
   }
@@ -1756,6 +1777,7 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  /*Hello*/
   .grid_col_sm-clear_float {
     clear: both;
   }
@@ -1765,6 +1787,7 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  /*Hello*/
   .grid_col_med-clear_float {
     clear: both;
   }
@@ -1774,6 +1797,7 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
+  /*Hello*/
   .grid_col_lg-clear_float {
     clear: both;
   }

@@ -3,26 +3,26 @@
 // Grid_Offset Column Resets
 //----------------------------------------------------------------------------
 
-@media screen and (min-width: $extsm-bp) {
+@include mq-breakpoint-upto($extsm) {
     .grid_offset_extsm-reset{
         margin-left: 0;
     }
 }
 
-@media screen and (min-width: $sm-bp) {
+@include mq-breakpoint-upto($sm) {
     .grid_offset_sm-reset{
         margin-left: 0;
     }
 }
 
 
-@media screen and (min-width: $med-bp) {
+@include mq-breakpoint-upto($med) {
     .grid_offset_med-reset{
         margin-left: 0;
     }
 }
 
-@media screen and (min-width: $lg-bp) {
+@include mq-breakpoint-upto($lg) {
     .grid_offset_lg-reset{
         margin-left: 0;
     }
@@ -40,7 +40,7 @@
     float: right;
 }
 
-@media screen and (min-width: $extsm-bp) {
+@include mq-breakpoint-upto($extsm) {
     .grid_col_extsm-clear_float{
       clear: both;
     }
@@ -49,7 +49,7 @@
     }
 }
 
-@media screen and (min-width: $sm-bp) {
+@include mq-breakpoint-upto($sm) {
     .grid_col_sm-clear_float{
       clear: both;
     }
@@ -59,7 +59,7 @@
 }
 
 
-@media screen and (min-width: $med-bp) {
+@include mq-breakpoint-upto($med) {
     .grid_col_med-clear_float{
       clear: both;
     }
@@ -69,7 +69,7 @@
     }
 }
 
-@media screen and (min-width: $lg-bp) {
+@include mq-breakpoint-upto($lg) {
     .grid_col_lg-clear_float{
       clear: both;
     }
