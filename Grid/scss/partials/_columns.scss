@@ -3,15 +3,19 @@
 // Layout Columns
 //----------------------------------------------------------------------------
 
-[class*=grid_offset]{
-    float:none;
+[class^=grid_col]{
+    position: relative;
+    min-height: 1px;
+    padding-left: $margin-side;
+    padding-right: $margin-side;
+    margin-bottom: $margin-bottom;
 }
+
 
 @media screen and (min-width: $extsm-bp) {
 
-	[class^=grid_col]{
-	    float: left;
-        padding: 0 $margin-side;
+	[class^=grid_col_extsm]{
+        float: left;
 	}
 
 	[class^=grid_col] [class^=grid_col]{
@@ -32,6 +36,10 @@
 }// END EXTRA SMALL BREAKPOINT
 
 @media screen and (min-width: $sm-bp) {
+
+    [class^=grid_col_sm]{
+        float: left;
+    }
 	
 	@for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
@@ -49,6 +57,10 @@
 
 @media screen and (min-width: $med-bp) {
 
+    [class^=grid_col_med]{
+        float: left;
+    }
+
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
@@ -60,19 +72,14 @@
         }
     }
 
-    .grid_col-ratio_1_3{
-        width: percentage( ( 1 - ( 1 / $ratio ) ) );
-    }
-
-    .grid_col-ratio_2_3{
-        width: percentage( 1 / $ratio );
-    }
-
-
 }//END MEDIUM BREAKPOINT
 
 
 @media screen and (min-width: $lg-bp) {
+
+    [class^=grid_col_lg]{
+        float: left;
+    }
 
 	@for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;

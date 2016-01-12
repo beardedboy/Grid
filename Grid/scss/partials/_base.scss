@@ -3,19 +3,20 @@
 // Base Styles
 //----------------------------------------------------------------------------
 
-.grid_row{
-    display: block;
-    clear: both;
-    *zoom: 1;
-    margin: 0 (-$margin-side);
-}
-.grid_row{
-    zoom: 1;
-    position: relative;
+.wrapper, .wrapper-full{
+    padding-left: ($margin-side);
+    padding-right: ($margin-side);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.grid_row .grid_row{
-    margin: 0 (-$margin-side) (-$margin-bottom) (-$margin-side);    
+.wrapper{
+    max-width: $wrapper-width;
+}
+
+
+.grid_row{
+    margin: 0 (-$margin-side);
 }
 
 .grid_row:before,
@@ -28,7 +29,7 @@
     clear: both;
 }
 
-[class^=grid_col]{
-    width: 100%;
-    margin-bottom: $margin-bottom;
+.grid_row .grid_row{
+    margin-bottom: (-$margin-bottom);    
 }
+

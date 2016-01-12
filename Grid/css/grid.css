@@ -15,20 +15,19 @@ html {
 /* ==========================================================================
    Base
    ========================================================================== */
+.wrapper, .wrapper-full {
+  padding-left: 0.809em;
+  padding-right: 0.809em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrapper {
+  max-width: 71.5em;
+}
+
 .grid_row {
-  display: block;
-  clear: both;
-  *zoom: 1;
   margin: 0 -0.809em;
-}
-
-.grid_row {
-  zoom: 1;
-  position: relative;
-}
-
-.grid_row .grid_row {
-  margin: 0 -0.809em -1.618em -0.809em;
 }
 
 .grid_row:before,
@@ -41,22 +40,24 @@ html {
   clear: both;
 }
 
-[class^=grid_col] {
-  width: 100%;
-  margin-bottom: 1.618em;
+.grid_row .grid_row {
+  margin-bottom: -1.618em;
 }
 
 /* ==========================================================================
    Columns
    ========================================================================== */
-[class*=grid_offset] {
-  float: none;
+[class^=grid_col] {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.809em;
+  padding-right: 0.809em;
+  margin-bottom: 1.618em;
 }
 
 @media screen and (min-width: 25em) {
-  [class^=grid_col] {
+  [class^=grid_col_extsm] {
     float: left;
-    padding: 0 0.809em;
   }
 
   [class^=grid_col] [class^=grid_col] {
@@ -113,6 +114,10 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
+  [class^=grid_col_sm] {
+    float: left;
+  }
+
   .grid_col_sm-1_12 {
     width: 8.33333%;
   }
@@ -163,6 +168,10 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
+  [class^=grid_col_med] {
+    float: left;
+  }
+
   .grid_col_med-1_12 {
     width: 8.33333%;
   }
@@ -211,16 +220,12 @@ html {
     width: 100%;
     float: none;
   }
-
-  .grid_col-ratio_1_3 {
-    width: 38.1953%;
-  }
-
-  .grid_col-ratio_2_3 {
-    width: 61.8047%;
-  }
 }
 @media screen and (min-width: 62.5em) {
+  [class^=grid_col_lg] {
+    float: left;
+  }
+
   .grid_col_lg-1_12 {
     width: 8.33333%;
   }
@@ -1744,44 +1749,6 @@ html {
   float: right;
 }
 
-/*.grid_col-last{
-   width: auto !important;
-   float: none !important;
-   overflow: hidden !important;
-}
-
-@media screen and (min-width: $extsm-bp) {
-    .grid_col_extsm-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-@media screen and (min-width: $sm-bp) {
-    .grid_col_sm-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-
-@media screen and (min-width: $med-bp) {
-    .grid_col_med-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-@media screen and (min-width: $lg-bp) {
-    .grid_col_lg-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}*/
 @media screen and (min-width: 25em) {
   .grid_col_extsm-clear_float {
     clear: both;
@@ -1818,23 +1785,6 @@ html {
     clear: none;
   }
 }
-/*[class^=grid_col] [class^=grid_col] .grid_col-last, 
-[class^=grid_col] [class^=grid_col]:last-child {
-   margin-bottom: 0;
-}*/
-.wrapper, .wrapper-full {
-  overflow-x: hidden;
-}
-
-.wrapper {
-  max-width: 71.5em;
-  margin: 0 auto;
-}
-
-.wrapper-full {
-  max-width: 100%;
-}
-
 /* ==========================================================================
    Presentation
    ========================================================================== */

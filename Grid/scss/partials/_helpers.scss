@@ -40,45 +40,6 @@
     float: right;
 }
 
-/*.grid_col-last{
-   width: auto !important;
-   float: none !important;
-   overflow: hidden !important;
-}
-
-@media screen and (min-width: $extsm-bp) {
-    .grid_col_extsm-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-@media screen and (min-width: $sm-bp) {
-    .grid_col_sm-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-
-@media screen and (min-width: $med-bp) {
-    .grid_col_med-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}
-
-@media screen and (min-width: $lg-bp) {
-    .grid_col_lg-last{
-       width: auto !important;
-       float: none !important;
-       overflow: hidden !important;
-    }
-}*/
-
 @media screen and (min-width: $extsm-bp) {
     .grid_col_extsm-clear_float{
       clear: both;
@@ -115,22 +76,4 @@
     .grid_col_lg-reset_float{
       clear: none;
     }
-}
-
-/*[class^=grid_col] [class^=grid_col] .grid_col-last, 
-[class^=grid_col] [class^=grid_col]:last-child {
-   margin-bottom: 0;
-}*/
-
-.wrapper, .wrapper-full{
-  overflow-x: hidden; 
-}
-
-.wrapper{
-    max-width: $wrapper-width;
-    margin: 0 auto;
-}
-
-.wrapper-full{
-    max-width: 100%;
 }
