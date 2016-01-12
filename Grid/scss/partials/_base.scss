@@ -17,17 +17,9 @@
 
 .grid_row{
     margin: 0 (-$margin-side);
+    @include clearfix;
 }
 
-.grid_row:before,
-.grid_row:after {
-    content: " ";
-    display: table;
-}
-
-.grid_row:after {
-    clear: both;
-}
 
 .grid_row .grid_row{
     margin-bottom: (-$margin-bottom);    

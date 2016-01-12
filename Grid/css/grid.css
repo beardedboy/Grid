@@ -29,13 +29,10 @@ html {
 .grid_row {
   margin: 0 -0.809em;
 }
-
-.grid_row:before,
-.grid_row:after {
+.grid_row:before, .grid_row:after {
   content: " ";
   display: table;
 }
-
 .grid_row:after {
   clear: both;
 }
