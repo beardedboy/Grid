@@ -3,21 +3,17 @@
 // Base Styles
 //----------------------------------------------------------------------------
 
-.wrapper, .wrapper-full{
-    padding-left: ($margin-side);
-    padding-right: ($margin-side);
-    margin-right: auto;
-    margin-left: auto;
+.container, .container-full{
+    @include make-container();
 }
 
-.wrapper{
-    max-width: $wrapper-width;
+.container{
+    max-width: $container-width;
 }
 
 
 .grid_row{
-    margin: 0 (-$margin-side);
-    @include clearfix;
+    @include make-row();
 }
 
 

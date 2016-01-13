@@ -4,11 +4,22 @@
 //----------------------------------------------------------------------------
 
 [class^=grid_col]{
-    position: relative;
-    min-height: 1px;
-    padding-left: $margin-side;
-    padding-right: $margin-side;
-    margin-bottom: $margin-bottom;
+    @include make-col();
+}
+
+
+.blah-main{
+    @include make-col();
+    @include make-col-span(12, 16);
+
+    @include mq-breakpoint-upto($sm) {
+        @include make-col-span(6, 16, float);
+
+    }
+
+    @include mq-breakpoint-upto($med) {
+        @include make-col-span(3, 16);
+    }
 }
 
 

@@ -18,11 +18,44 @@
 }
 
 
-//Mixins for Media Query Breakpoints
+// Mixins for Media Query Breakpoints
 
 @mixin mq-breakpoint-upto($size) {
 	@media screen and (min-width: $size) {
 		@content;
+	}
+}
+
+
+
+// Grid creation mixins
+
+
+@mixin make-container($margin: $margin-side){
+	padding-left: ($margin);
+    padding-right: ($margin);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin make-row($mar-side: $margin-side){
+	margin: 0 (-$mar-side);
+    @include clearfix;
+}
+
+
+@mixin make-col($side: $margin-side, $bottom: $margin-bottom){
+	position: relative;
+    min-height: 1px;
+    padding-left: $side;
+    padding-right: $side;
+    margin-bottom: $bottom;
+}
+
+@mixin make-col-span($num, $total: $columns, $float: nofloat){
+	width: percentage(($num / $total));
+	@if $float == float {
+		float: left;
 	}
 }
 
