@@ -31,15 +31,20 @@
 // Grid creation mixins
 
 
-@mixin make-container($margin: $margin-side){
-	padding-left: ($margin);
-    padding-right: ($margin);
+@mixin make-container($margin-side: $margin-side){
+	padding-left: ($margin-side);
+    padding-right: ($margin-side);
     margin-right: auto;
     margin-left: auto;
 }
 
-@mixin make-row($mar-side: $margin-side){
-	margin: 0 (-$mar-side);
+@mixin make-row($nested: no, $margin-side: $margin-side, $margin-bottom: $margin-bottom){
+
+	@if $nested == nested {
+		margin: 0 (-$margin-side) (-$margin-bottom) (-$margin-side);
+	} @else {
+		margin: 0 (-$margin-side);
+	}
     @include clearfix;
 }
 
@@ -57,5 +62,18 @@
 	@if $float == float {
 		float: left;
 	}
+}
+
+@mixin add-col-offset($cols, $total: $columns){
+	margin-left:  percentage(($cols / $total));
+}
+
+
+@mixin add-col-push($cols, $total: $columns){
+	left: percentage(($cols / $total));
+}
+
+@mixin add-col-pull($cols, $total: $columns){
+	right: percentage(($cols / $total));
 }
 

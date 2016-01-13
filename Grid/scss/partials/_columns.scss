@@ -8,21 +8,6 @@
 }
 
 
-.blah-main{
-    @include make-col();
-    @include make-col-span(12, 16);
-
-    @include mq-breakpoint-upto($sm) {
-        @include make-col-span(6, 16, float);
-
-    }
-
-    @include mq-breakpoint-upto($med) {
-        @include make-col-span(3, 16);
-    }
-}
-
-
 @include mq-breakpoint-upto($extsm) {
 
 	[class^=grid_col_extsm]{
