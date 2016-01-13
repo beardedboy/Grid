@@ -4,7 +4,7 @@
 // ----------------------------------------------------------------------------
 
 
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
     
     @for $i from 1 through ($columns - 1) {
         
@@ -66,7 +66,7 @@
 // ----------------------------------------------------------------------------
 
 
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
     $i: $columns;
 
     @while $i > 1 {

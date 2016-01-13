@@ -8,7 +8,7 @@
 }
 
 
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
 
 	[class^=grid_col_extsm]{
         float: left;
@@ -98,7 +98,7 @@
 //----------------------------------------------------------------------------
 
 
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 

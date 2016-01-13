@@ -30,12 +30,14 @@
 
 // Grid creation mixins
 
-
-@mixin make-container($margin-side: $margin-side){
-	padding-left: ($margin-side);
-    padding-right: ($margin-side);
+@mixin make-container($width: null, $max-width: $container-width, $padding: $margin-side){
+	padding-left: ($padding);
+    padding-right: ($padding);
     margin-right: auto;
     margin-left: auto;
+    @if $width == width{
+    	max-width: $max-width;
+    }
 }
 
 @mixin make-row($nested: no, $margin-side: $margin-side, $margin-bottom: $margin-bottom){
@@ -57,7 +59,7 @@
     margin-bottom: $bottom;
 }
 
-@mixin make-col-span($num, $total: $columns, $float: nofloat){
+@mixin make-col-span($num, $total: $columns, $float: null){
 	width: percentage(($num / $total));
 	@if $float == float {
 		float: left;

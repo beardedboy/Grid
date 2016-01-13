@@ -3,7 +3,7 @@
 // Grid_Offset Column Resets
 //----------------------------------------------------------------------------
 
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
     .grid_offset_extsm-reset{
         margin-left: 0;
     }
@@ -32,15 +32,8 @@
 // Grid Helper Classes
 // ----------------------------------------------------------------------------
 
-.float-left{
-    float: left;
-}
 
-.float-right{
-    float: right;
-}
-
-@include mq-breakpoint-upto($extsm) {
+@include mq-breakpoint-upto($exsm) {
     .grid_col_extsm-clear_float{
       clear: both;
     }

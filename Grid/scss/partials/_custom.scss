@@ -1,6 +1,6 @@
 
 .custom_container{
-	@include make-container();
+	@include make-container(width);
 }
 
 .custom_row{

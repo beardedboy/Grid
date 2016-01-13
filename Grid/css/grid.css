@@ -2086,6 +2086,7 @@ html {
   padding-right: 0.809em;
   margin-right: auto;
   margin-left: auto;
+  max-width: 71.5em;
 }
 
 .custom_row {
@@ -2186,14 +2187,6 @@ html {
     margin-left: 0;
   }
 }
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
 @media screen and (min-width: 25em) {
   .grid_col_extsm-clear_float {
     clear: both;

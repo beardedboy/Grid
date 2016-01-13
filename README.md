@@ -5,16 +5,19 @@ A flexible and responsive X column grid system build in SCSS, compiled to CSS an
 
 <strong>Supported:</strong> IE9+, Chrome, Firefox, Safari
 
-<strong>To support IE7-8:</strong> add https://github.com/scottjehl/Respond to your project ( adds support for media queries).
+<strong>To support IE8:</strong> add https://github.com/scottjehl/Respond to your project ( adds support for media queries).
 
 ##Basic Anatomy
 
+
 ###Container
-All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS variable and all child elements ( mostly likely the rows declared within the container ) max-widths are restrained to this.
+All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS global variable and all child elements ( mostly likely the rows declared within the container ) are restrained to this max-width.
 
 ######Example
 
 `<div class = "container"></div>`
+
+`<div class = "container-full"></div>`
 
 
 <hr>
@@ -39,7 +42,7 @@ Columns are used to split content horizontally. Column widths are set in percent
 
 `<div class = "col-6-12"></div>`<br>
 `<div class = "col-4-12"></div>`<br>
-`<div class = "col-2-12 col-last"></div>`<br>
+`<div class = "col-2-12"></div>`<br>
 
 I have decided not to declare any padding to the columns themselves as this has caused issues with uneven widths when nesting columns ( more on nesting later ).  Instead each column needs to include a div with a 'col-content' class.  The actual columns content will be placed within this container.
 
@@ -52,13 +55,13 @@ The last column in each row needs the '.col-last' class applied to allow columns
 
 ####Layout Columns
 
-Layout columns widths are defined as x columns out of 12.  Ranging from 1 column out of 12 occupying just 1/12th of the width of a row upto 12 columns out of 12 occupying 100% the width of a row.
+Layout columns widths are defined as x columns out of x.  Ranging from 1 column out of 12 occupying just 1/12th of the width of a row upto 12 columns out of 12 occupying 100% the width of a row.
 
 ######Example
 
 `<div class = "col-6-12"></div>`<br>
 `<div class = "col-4-12"></div>`<br>
-`<div class = "col-2-12 col-last"></div>`<br>
+`<div class = "col-2-12"></div>`<br>
 
 
 ####Content Columns
@@ -69,7 +72,7 @@ Content columns are divided equally by 100% and are represented by an appropriat
 
 `<div class = "col-1-3"></div>`<br>
 `<div class = "col-1-3"></div>`<br>
-`<div class = "col-1-3 col-last"></div>`<br>
+`<div class = "col-1-3"></div>`<br>
 
 or
 
@@ -77,21 +80,10 @@ or
 `<div class = "col-1-5"></div>`<br>
 `<div class = "col-1-5"></div>`<br>
 `<div class = "col-1-5"></div>`<br>
-`<div class = "col-1-5 col-last"></div>`<br>
+`<div class = "col-1-5"></div>`<br>
 
 Credit goes to http://thisisdallas.github.io/Simple-Grid/ for the idea of defining the columns in two sets, layout and content.
 
-
-####Ratio Columns
-
-Using the ratio variable specified in the SCSS, a set of columns are constructed based on this ratio that can be used.  Using the golden ratio (1.618) for example will result in two columns being create that are split according to this ratio ( 61.8 / 38.2 split). 
-
-Columns spacing are based on the ratio value as well to keep the layout to the same scale.
-
-######Example
-
-`<div class = "col-ratio-2-3"></div>`<br>
-`<div class = "col-ratio-1-3"></div>`<br>
 
 <hr>
 
@@ -131,7 +123,7 @@ Each new set of nested columns should be nested within a 'row' classed container
 
 <ul>
 	<li><del>.row-fixed - If you set the container width to 100% any row class directly inside it will fill to 100% as well.  If you add this class to your row it will take on
-	the max-width specified in the SCSS variable $row-fixed-width instead and center it's contents.<</li>
+	the max-width specified in the SCSS variable $row-fixed-width instead and center it's contents.</li>
 	<li><strong>.float-left, .float-right</strong> - Easy one really, they both respectively float the container they're attached too either left or right.  These have been added to show their functionality with the example grid, however these helper classes would probably be added to your css code at an earlier stage and removed from here.</li>
 	<li><strong>.full-width</strong>- Applied to a column it will not apply any margins either side, stretching out 100% of the available space.</li>
 </ul>
