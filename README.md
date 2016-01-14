@@ -13,6 +13,8 @@ A flexible and responsive X column grid system build in SCSS, compiled to CSS an
 ###Container
 All of the main content should be wrapped in a div with the 'container' class. The width of the container can be altered in a SCSS global variable and all child elements ( mostly likely the rows declared within the container ) are restrained to this max-width.
 
+The 'container-full' class will set the elements width to 100% and should be used if you want the grid to stretch the full width of the screen.
+
 ######Example
 
 `<div class = "container"></div>`
@@ -27,30 +29,32 @@ Rows are used to organise groups of columns vertically. The 'row' class contains
 
 ######Example
 
-`<div class = "row"></div>`<br>
-`<div class = "row"></div>`<br>
-`<div class = "row"></div>`<br>
+`<div class = "grid_row"></div>`<br>
+`<div class = "grid_row"></div>`<br>
+`<div class = "grid_row"></div>`<br>
 
 
 <hr>
 
 ###Columns
-Columns are used to split content horizontally. Column widths are set in percentages and any number can be used as long as their total widths add upto 100%.
+Columns are used to split content horizontally. Column widths are set in percentages and any number can be used as long as their total widths add up to 100%.
+
+Calculating the widths of the columns are based on the number set in the SCSS global variable $columns.
+
+All columns by default are 100% in width and stack one on top of the other, making their layout mobile first.
+
+
 
 
 ######Example
 
-`<div class = "col-6-12"></div>`<br>
-`<div class = "col-4-12"></div>`<br>
-`<div class = "col-2-12"></div>`<br>
+( For the rest of the examples in the document we will assume that 12 columns have been set. )
 
-I have decided not to declare any padding to the columns themselves as this has caused issues with uneven widths when nesting columns ( more on nesting later ).  Instead each column needs to include a div with a 'col-content' class.  The actual columns content will be placed within this container.
+`<div class = "grid_col_exsm_6-12"></div>`<br>
+`<div class = "grid_col_exsm_col_4-12 grid_col_lg_col_3-12"></div>`<br>
+`<div class = "grid_col_exsm_col_2-12 grid_col_lg_col_3-12"></div>`<br>.
 
-The last column in each row needs the '.col-last' class applied to allow columns to display correctly in IE7-8.
 
-######Example
-
-`<div class = "col-6-12"><div class = "col-content">content goes here</div></div>`
 
 
 ####Layout Columns

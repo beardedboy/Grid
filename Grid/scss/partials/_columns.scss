@@ -10,7 +10,7 @@
 
 @include mq-breakpoint-upto($exsm) {
 
-	[class^=grid_col_extsm]{
+	[class^=grid_col_exsm]{
         float: left;
 	}
 
@@ -21,7 +21,7 @@
 	@for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col_extsm-#{$i}_#{$columns} {
+        .grid_col_exsm-#{$i}_#{$columns} {
            width: $val;
             @if $i == $columns {
         		float: none;
@@ -102,7 +102,7 @@
     @for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col_extsm-1_#{$columns - $i + 1} {
+        .grid_col_exsm-1_#{$columns - $i + 1} {
             width: (100% / ($columns - $i + 1) );
             @if $i == $columns { float: none; }
         }

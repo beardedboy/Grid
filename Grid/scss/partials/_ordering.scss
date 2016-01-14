@@ -8,7 +8,7 @@
         
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col_push_extsm-#{$i} {
+        .grid_col_push_exsm-#{$i} {
             left: $val;
         }
 
@@ -70,7 +70,7 @@
         
         $val: ( 100% / $columns ) * $i;
 
-        .grid_col_pull_extsm-#{$i} {
+        .grid_col_pull_exsm-#{$i} {
             right: $val;
         }
 

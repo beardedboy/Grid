@@ -10,7 +10,7 @@
         
         $val: ( 100% / $columns ) * $i;
 
-        .grid_offset_extsm-#{$i}_#{$columns} {
+        .grid_offset_exsm-#{$i}_#{$columns} {
             margin-left: $val;
         }
 
