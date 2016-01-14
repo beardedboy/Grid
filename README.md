@@ -144,7 +144,7 @@ In order for the columns on the second line to acknowledge the frst line columns
 
 If, like in this example, we change the layout again at a higher breakpoint and want to return those columns to a single line we need to reverse clear floats class we applied earlier.  This can be achieved using a reset_float class.
 
-
+<hr>
 
 ###Custom Grids
 
