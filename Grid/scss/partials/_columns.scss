@@ -3,20 +3,23 @@
 // Layout Columns
 //----------------------------------------------------------------------------
 
-[class^=grid_col]{
+.grid_col{
     @include make-col();
 }
 
+/*.grid_col .grid_col{
+    margin-bottom: 0;
+}*/
 
 @include mq-breakpoint-upto($exsm) {
 
-	[class^=grid_col_exsm]{
+	[class*=grid_col_exsm]{
         float: left;
-	}
+    }
 
-	[class^=grid_col] [class^=grid_col]{
-    	margin-bottom: 0;
-	}
+    [class*=grid_col_exsm] .grid_col{
+        margin-bottom: 0;
+    }
 	
 	@for $i from 1 through $columns {
         $val: ( 100% / $columns ) * $i;
@@ -34,8 +37,12 @@
 
 @include mq-breakpoint-upto($sm) {
 
-    [class^=grid_col_sm]{
+    [class*=grid_col_sm]{
         float: left;
+    }
+
+    [class*=grid_col_sm] .grid_col{
+        margin-bottom: 0;
     }
 	
 	@for $i from 1 through $columns {
@@ -53,8 +60,12 @@
 
 @include mq-breakpoint-upto($med) {
 
-    [class^=grid_col_med]{
+    [class*=grid_col_med]{
         float: left;
+    }
+
+    [class*=grid_col_med] .grid_col{
+        margin-bottom: 0;
     }
 
     @for $i from 1 through $columns {
@@ -74,8 +85,12 @@
 
 @include mq-breakpoint-upto($lg) {
 
-    [class^=grid_col_lg]{
+    [class*=grid_col_lg]{
         float: left;
+    }
+
+    [class*=grid_col_lg] .grid_col{
+        margin-bottom: 0;
     }
 
 	@for $i from 1 through $columns {

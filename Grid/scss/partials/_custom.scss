@@ -12,7 +12,7 @@
 }
 
 .custom_col{
-    background-color: gray;
+    //background-color: gray;
     @include make-col();
     @include make-col-span(18, 18);
 
@@ -27,8 +27,7 @@
 }
 
 .custom_col-main{
-	background-color: gray;
-
+	//background-color: gray;
 	@include make-col();
     @include make-col-span(12, 12);
 
@@ -38,7 +37,7 @@
 }
 
 .custom_col-side{
-	background-color: red;
+	//background-color: red;
 
 	@include make-col();
     @include make-col-span(12, 12);
