@@ -44,7 +44,7 @@ html {
 /* ==========================================================================
    Columns
    ========================================================================== */
-.grid_col {
+[class^=grid_col] {
   position: relative;
   min-height: 1px;
   padding-left: 0.809em;
@@ -52,15 +52,12 @@ html {
   margin-bottom: 1.618em;
 }
 
-/*.grid_col .grid_col{
-    margin-bottom: 0;
-}*/
 @media screen and (min-width: 25em) {
-  [class*=grid_col_exsm] {
+  [class^=grid_col_exsm] {
     float: left;
   }
 
-  [class*=grid_col_exsm] .grid_col {
+  [class^=grid_col_exsm] [class^=grid_col] {
     margin-bottom: 0;
   }
 
@@ -114,11 +111,11 @@ html {
   }
 }
 @media screen and (min-width: 31.25em) {
-  [class*=grid_col_sm] {
+  [class^=grid_col_sm] {
     float: left;
   }
 
-  [class*=grid_col_sm] .grid_col {
+  [class^=grid_col_sm] [class^=grid_col] {
     margin-bottom: 0;
   }
 
@@ -172,11 +169,11 @@ html {
   }
 }
 @media screen and (min-width: 50em) {
-  [class*=grid_col_med] {
+  [class^=grid_col_med] {
     float: left;
   }
 
-  [class*=grid_col_med] .grid_col {
+  [class^=grid_col_med] [class^=grid_col] {
     margin-bottom: 0;
   }
 
@@ -230,11 +227,11 @@ html {
   }
 }
 @media screen and (min-width: 62.5em) {
-  [class*=grid_col_lg] {
+  [class^=grid_col_lg] {
     float: left;
   }
 
-  [class*=grid_col_lg] .grid_col {
+  [class^=grid_col_lg] [class^=grid_col] {
     margin-bottom: 0;
   }
 
