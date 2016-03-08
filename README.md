@@ -168,4 +168,5 @@ A set of four media queries have been added to get you going but the width value
 The current list of ongoing issues to fix or new features to add are:
 
 <ul><li><del>Set up offset classes using a SCSS loop so that they can factor in the $columns variable ( Currently offset classes are declared manually with CSS ) to adapt to changes in column amounts.</del></li>
+<li>Expand documentation on Custom grids with an example</li>
 </ul>
